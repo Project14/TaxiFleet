@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% witseiepaper-2005.tex
+%
+%                       Ken Nixon (12 October 2005)
+%
+%                       Sample Paper for ELEN417/455 2005
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,twocolumn]{witseiepaper}
+
+%
+% All KJN's macros and goodies (some shameless borrowing from SPL)
+\usepackage{KJN}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\title{FLEET OF TAXI SERVICE MANAGEMENT SYSTEM - LABORATORY EXERCISE 2: SOFTWARE REQUIREMENTS SPECIFICATION}
+
+\author{Danielle Winter (563795), Frederick Nieuwoudt (386372), Stephen Friedman (360938) \& Sello Molele (0604606X)}
+\thanks{School of Electrical \& Information Engineering, University of the
+Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\maketitle
+\thispagestyle{empty}\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{Introduction}
+
+\section{User Requirements}
+A brief description of the different users and their basic requirements is given. Furthermore, potential users were surveyed for additional requirements. The user requirements are specified based on the MOSCOW and FURPS methodologies \cite{SoftwareEngTextbook}.
+
+\subsection{Basic Customer Requirements}
+\begin{itemize}
+\item Passengers
+\begin{itemize}
+\item Registration
+\item Account Maintenance
+\item Lift Requests
+\end{itemize}
+\item Drivers
+\begin{itemize}
+\item Receive Fare
+\item Complete Fare
+\end{itemize}
+\item Administrators
+\begin{itemize}
+\item Add drivers
+\item Maintain driver details
+\item View logs
+\end{itemize}
+\end{itemize}
+
+\subsection{Detailed User Requirements}
+Passenger Registration
+\begin{itemize}
+\item Passenger login details set up
+\item Enter personal details (name, age, gender)
+\item Enter contact details (email address, cellphone number)
+\item Enter banking details (Credit Card number and type, expiry date of card, CVV number)
+\end{itemize}
+Passenger Account Maintenance
+\begin{itemize}
+\item Ability to update details (Change in name or contact details and updated payment details)
+\item Account cancellation (optional)
+\end{itemize}
+Passenger Lift Requests
+\begin{itemize}
+\item Log a destination
+\item Log a current location
+\item Specify number of passengers to be transported
+\item Passenger payment confirmation
+\item Order a lift in advance (e.g. collection from the airport at a specified time) 
+\item Passenger feedback (ride comfort, satisfaction)
+\item Job update (passenger is able to say if they have been collected)
+\end{itemize}
+Driver Fare Received
+\begin{itemize}
+\item Driver receives an order for a nearby customer
+\item Driver accepts order
+\item Passenger updated about taxi arrival time
+\item Driver status changed to unavailable
+\end{itemize}
+Driver  Fare Completed
+\begin{itemize}
+\item Driver reports drop-off
+\item Driver status changed to free
+\end{itemize}
+
+Administrator Driver Addition
+\begin{itemize}
+\item Driver personal details added to database (Name, age, Identity number, gender, medical aid details, tax number)
+\item Driver contact details (residential and postal address, email address, cellphone number)
+\item Driver vehicle details (number plate, car model, colour and insurance details)
+\end{itemize}
+Administrator Driver Maintenance
+\begin{itemize}
+\item Update driver details for personal, contact and vehicle categories
+\end{itemize}
+Administrator Log Viewing
+\begin{itemize}
+\item View current job data
+\item View historical job data
+\end{itemize}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\nocite{*}
+\bibliographystyle{witseie}
+\bibliography{TaxiFleet}
+
+%{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
+
+\end{document}
+
+" vim: ts=4
+" vim: tw=78
+" vim: autoindent
+" vim: shiftwidth=4
