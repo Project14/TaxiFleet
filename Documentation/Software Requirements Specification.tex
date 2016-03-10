@@ -36,6 +36,8 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \section{Introduction}
+A software database system for a Taxi Fleet Management is proposed in this Software Requirements Specification. The objective of this document is to describe in detail the user requirements as well as the specifics of what the system requires and how it will be developed.\\\\
+The aim of the system is to respond to a customer request for transport to a location. It will then find an available driver for the job and deploy their taxi for service. It will also allow for users to manage profiles and administrators to manage diver profiles.
 
 \section{User Requirements}
 A brief description of the different users and their basic requirements is given. Furthermore, potential users were surveyed for additional requirements. The user requirements are specified based on the MOSCOW and FURPS methodologies \cite{SoftwareEngTextbook}.
@@ -116,17 +118,18 @@ Administrator Log Viewing
 \section{System Specifications}
 \subsection{Scope}
 
-The taxi fleet management system is a tool that provides a service where a user can request a taxi and the system will dispatch the closest available driver.\
-The system back-end will be required to store information about drivers, customers, and the current pricing scheme.\
-The system front end will be presented in the form of a web gui. This will provide a means for customers to input their current location and destination. The web interface will also provide a quoted price and allow for the customer to either accept or reject the quote.
+The taxi fleet management system is a tool that provides a service where a user can request a taxi and the system will dispatch the closest available driver.\\\\
+The system back-end will be required to store information about drivers, customers, and the current pricing scheme. The system will keep historical data regarding trips that have been taken for auditing and dispute resolution.\\\\
+The system front end will be presented in the form of a web interface. This will provide a means for customers to input their current location and destination. The web interface will also provide a quoted price and allow for the customer to either accept or reject the quote.
 
 \subsection{Testing Plan}
 
-To achieve a quality product the test driven development(TDD) paradigm will be adopted. TDD calls for the writing of tests before writing the code to be used in the implementation. This encourages simple modular code. The TDD workflow follows the sequence of writing a test, validating that the new test fails, writing the application code, running all the tests together, and then refactoring. This sequence allows for the project to move from getting code working to refactoring the code into simple understandable modules.
+To achieve a quality product the test driven development(TDD) paradigm will be adopted. TDD calls for the writing of tests before writing the code to be used in the implementation. This encourages simple modular code.\\\\
+ The TDD workflow follows the sequence of writing a test, validating that the new test fails, writing the application code, running all the tests together, and then refactoring. This sequence allows for the project to move from getting code working to refactoring the code into simple understandable modules.
 
 \subsection{Implementation Plan}
 
-Following the Scrum SDLC methodology, will provide shippable incrementally improved products. Though a minimum of required features will be needed for a product that can meet the project scope. Additional functionality can be incrementally provided over the life span of the product.
+Following the Scrum SDLC methodology, will provide shippable incrementally improved products. A minimum of required features will be needed for a product that can meet the project scope as defined above. Additional functionality can be incrementally provided over the life span of the product.
 
 
 
