@@ -36,6 +36,8 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 \section{Introduction}
+A software database system for a Taxi Fleet Management is proposed in this Software Requirements Specification. The objective of this document is to describe in detail the user requirements as well as the specifics of what the system requires and how it will be developed.\\\\
+The aim of the system is to respond to a customer request for transport to a location. It will then find an available driver for the job and deploy their taxi for service. It will also allow for users to manage profiles and administrators to manage diver profiles.
 
 \section{User Requirements}
 A brief description of the different users and their basic requirements is given. Furthermore, potential users were surveyed for additional requirements. The user requirements are specified based on the MOSCOW and FURPS methodologies \cite{SoftwareEngTextbook}.
@@ -116,78 +118,100 @@ Administrator Log Viewing
 \section{System Specifications}
 \subsection{Scope}
 
-The taxi fleet management system is a tool that provides a service where a user can request a taxi and the system will dispatch the closest available driver.\
-The system back-end will be required to store information about drivers, customers, and the current pricing scheme.\
-The system front end will be presented in the form of a web gui. This will provide a means for customers to input their current location and destination. The web interface will also provide a quoted price and allow for the customer to either accept or reject the quote.
+The taxi fleet management system is a tool that provides a service where a user can request a taxi and the system will dispatch the closest available driver.\\\\
+The system back-end will be required to store information about drivers, customers, and the current pricing scheme. The system will keep historical data regarding trips that have been taken for auditing and dispute resolution.\\\\
+The system front end will be presented in the form of a web interface. This will provide a means for customers to input their current location and destination. The web interface will also provide a quoted price and allow for the customer to either accept or reject the quote.
 
 \subsection{Testing Plan}
 
-To achieve a quality product the test driven development(TDD) paradigm will be adopted. TDD calls for the writing of tests before writing the code to be used in the implementation. This encourages simple modular code. The TDD workflow follows the sequence of writing a test, validating that the new test fails, writing the application code, running all the tests together, and then refactoring. This sequence allows for the project to move from getting code working to refactoring the code into simple understandable modules.
+To achieve a quality product the test driven development(TDD) paradigm will be adopted. TDD calls for the writing of tests before writing the code to be used in the implementation. This encourages simple modular code.\\\\
+ The TDD workflow follows the sequence of writing a test, validating that the new test fails, writing the application code, running all the tests together, and then refactoring. This sequence allows for the project to move from getting code working to refactoring the code into simple understandable modules.
+
+\subsection{Implementation Plan}
+
+Following the Scrum SDLC methodology, will provide shippable incrementally improved products. A minimum of required features will be needed for a product that can meet the project scope as defined above. Additional functionality can be incrementally provided over the life span of the product.
 
 \subsection{Implementation Plan}
 
 Following the Scrum SDLC methodology, will provide shippable incrementally improved products. Though a minimum of required features will be needed for a product that can meet the project scope. Additional functionality can be incrementally provided over the life span of the product.
 
-\subsection{Scrum}
+\section{Scrum Product Backlog}
 
-Product Backlog
-
-\subsection Product Owner List of Needs
+\subsection{Product Owner List of Needs}
+\begin{itemize}
 \item Passenger Registration
 \item Passenger Account Maintenance 
 \item Passenger lift requests
 \item Driver fare received
 \item Driver fare completed
 \item Administrator Driver Addition
-\item Administrator Driver Maintanance 
+\item Administrator Driver Maintenance 
 \item Administrator Driver Log Viewing 
+\end{itemize}
 
-Sprint 1
-\subsection Basic Website that can allow few passengers to register and to request for the available driver, but the passengers/ customers do not see or have access to the list of drivers in this application 
+\subsection{Sprint 1}
+Basic Website that can allow few passengers to register and to request for the available driver, but the passengers/ customers do not see or have access to the list of drivers in this application 
 
+\begin{itemize}
 \item Passenger Registration
 \item Passenger lift requests
 \item Driver fare received
 \item Driver fare completed
 \item Administrator Driver Addition
+\end{itemize}
 
-
-Sprint 2
-\subsection Addiotibal features to the website that allows the drivers and passengers to have an ability of updating their personal details 
+\subsection{Sprint 2}
+Additional features to the website that allows the drivers and passengers to have an ability of updating their personal details
+\begin{itemize}
 \item Passenger Account Maintenance
-\item Administrator Driver Maintanance 
+\item Administrator Driver Maintenance 
+\end{itemize}
 
-Sprint 3
+\subsection{Sprint 3}
 
-\subsection Additional feature which is the driver log view storage which kept details of all the drivers in the system 
+Additional feature which is the driver log view storage which kept details of all the drivers in the system
+\begin{itemize} 
 \item Administrator Driver Log Viewing 
-
-Sprint 3
 \item Software Testing of the product. 
+\end{itemize}
 
-\subsection Sprint Time lines
-\item sprint 1 time line  is 2 weeks 
-\item sprint 2 and 3 timeline is 1 week 
-\item sprint 4 timeline is 1 week
+\subsection{Sprint Timelines}
+\begin{itemize} 
+\item Sprint 1 has a timeline of 2 weeks 
+\item Sprints 2 and 3 have a timeline of 1 week 
+\item Sprint 4 has a timeline of 1 week
+\end{itemize}
 
-Roles
+\subsection{Scrum Roles}
 
-Product Onwer
+\begin{itemize} 
+\item Product Owner
+\begin{itemize} 
 \item Gave the Taxi Fleet Management Specifications and He/ She will continue to update the requirements and interact with the customers and the scrum team. 
+\end{itemize}
 
-Project developer
+\item Project Developer
+\begin{itemize} 
 \item Implement the specified website with the scrum team.
+\end{itemize}
 
-Scrum master
+\item Scrum Master
+\begin{itemize} 
 \item Make sure that the team have meetings atleast twice or three times a week in order to woek on the project and ensures they work in a conducive enviroment and that they also give feedback once the work is done.  The on time software tool may be used for creating clear time lines for the project. She/ he also is responsible for drawing the burn down graph ones the team began to work to check their progress every week. 
+\end{itemize}
 
-Scrum Team
+\item Scrum Team
+\begin{itemize} 
 \item Developing the website, testing it and also improving the website as soon as there are special needs and specifications that the product owner needs. 
+\end{itemize}
+\end{itemize}
 
-Product Release Date
-\item after 4 weeks 
+\subsection{Product Release Date}
+\begin{itemize} 
+\item After 4 weeks 
+\end{itemize}
 
-Ar this stage the scrum retrospective stage may take place and the team will have a scrum review meeting with the product owner and hear of the improvements that could be made, after the new list of sprints have been developed, the team can improve the second product or service and release the second product. 
+At this stage the scrum retrospective stage may take place and the team will have a scrum review meeting with the product owner and hear of the improvements that could be made, after the new list of sprints have been developed, the team can improve the second product or service and release the second product. 
 
 
 
