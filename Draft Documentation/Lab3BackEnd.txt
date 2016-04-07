@@ -1,0 +1,36 @@
+This assumes that the server is Ubuntu. We will be using Apache and SQLite.
+	
+	• Starting Apache:
+		○ To install Apache (if it is not installed already), run:
+			§ sudo apt-get install apache2
+		○ In order to start Apache, run:
+			§ sudo service apache2 start
+		○ In order to stop Apache, run:
+			§ sudo service apache2 stop
+		○ In order to restart Apache, run:
+			§ Sudo service apache2 restart
+		○ In order to check Apache, run:
+			§ Sudo service apache2 status
+		○ NOTE: after changes to Apache configuration, the server must be restarted
+		○ Configuring the server involves editing the configuration files (Contained in /etc/apache2/):
+			§ apache2.conf
+				□ The main config file. It pieces the other referenced files together  to determine the server configuration
+			§ ports.conf
+				□ This determines the ports that the server uses to listen for 
+			§ mods-enabled/ (and mods-available/)
+				□ The configuration files apply to installed modules
+			§ conf-enabled/ (and conf-available/)
+				□ These configuration files manage global configuration
+				□ serve-cgi-bin.conf allows configuration for cgi scripts
+			§ sites-enabled/ (and sites-available/)
+				□ This allows for configuration per website. Typically, only one website is used per server, but multiple websites are allowed. WitsCabs uses 1 website.
+				□ The default config file is: 000-default.conf
+				□ Ensure that the DocumentRoot property is set to /var/www/html
+				
+	• Starting SQLite:
+		○ To install SQLite, run:
+			§ sudo apt-get install sqlite3
+		○ To ensure that SQLite is running, run:
+			§ Sqlite3
+	• Running Queries:
+		○ Run .import
