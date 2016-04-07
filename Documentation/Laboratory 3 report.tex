@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% witseiepaper-2005.tex
+%
+%                       Ken Nixon (12 October 2005)
+%
+%                       Sample Paper for ELEN417/455 2005
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,twocolumn]{witseiepaper}
+
+%
+% All KJN's macros and goodies (some shameless borrowing from SPL)
+\usepackage{KJN}
+
+%
+% PDF Info
+%
+\ifpdf
+\pdfinfo{
+/Title (INSTRUCTIONS AND STYLE GUIDELINES FOR THE PREPARATION OF FINAL YEAR LABORATORY PROJECT PAPERS : 2005 VERSION)
+/Author (Ken J Nixon)
+/CreationDate (D:200309251200)
+/ModDate (D:200510121530)
+/Subject (ELEN417/455 Paper Format, 2005)
+/Keywords (ELEN417, ELEN455, paper, instructions, style guidelines, laboratory project)
+}
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\title{ELEN4009 SOFTWARE ENGINEERING LABORATORY 3}
+
+\author{Danielle Winter (563795), Frederick Nieuwoudt (386372), Stephen Friedman (), Sello Molele ()
+\thanks{School of Electrical \& Information Engineering, University of the
+Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\abstract{}
+
+\keywords{}
+
+
+\maketitle
+\thispagestyle{empty}\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{PROJECT DESCRIPTION}
+
+The WitsCABS company owns a fleet of taxi-cabs and employs drivers for customer transportation within a city. The city is demarcated into service zones with a single taxi-stand in each service zone. Cab drivers will wait for clients at their closest taxi-stand. Each driver has a smartphone, embedded with a GPS, maps and navigational tracking and  access to the WitsCabs web application. \\ \\
+A centralised Dispatch Control Centre (DCC) receives call from customers. Customers specify their name, current location, destination and contact number. The DCC agent has access to their own interface on the WitsCABS application and can enter new customer jobs into the system. The back-end calculates distance and cost for the job and assigns an available driver to the task. At this point the driver receives a notification of a new client and will proceed to collect and deliver the client. The driver tracking is monitored by the back-end application and an SMS notification is sent to the client when the driver is close by. When the job is completed, the driver will return to their taxi-stand.\\
+\\
+The front-end component of the system has a single web application with two separate interfaces for the driver and the DCC respectively. An additional feature is the ability for the different users to log in and access their own interface. The driver interface gives information to the driver about current jobs (customer details) and has buttons for the driver to confirm when they have left to collect the client and when the task is complete.\\ \\
+The DCC interface has two panes - one for entering in new customers and one for viewing active jobs. The first pane comprises a form for the DCC agent to enter customer details. When they click the submit button, the entered information is sent to the back-end for distance and price calculations as well as driver assignment. The list of current jobs on the second pane in the DCC interface is then updated. When a driver completes a job, the job is removed from the active list.  
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{GROUP RESPONSIBILITIES}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Front-end}
+The front-end views for the driver and DCC interfaces were coded by Danielle Winter and Frederick Nieuwoudt.A pair programming method was used for implementing this system.\\ \\
+Frederick Nieuwoudt (Scrum Master):
+\begin{itemize}
+\item Driver interface implementation
+\item Login/log-off 
+\item Commenting DCC code
+\item System aesthetics
+\item System modifications
+\end{itemize}
+Danielle Winter:
+\begin{itemize}
+\item Driver interface commenting
+\item Login/log-off commenting
+\item DCC interface implementation
+\item System aesthetics
+\item System modifications
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Back-end}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{USING THE SOFTWARE}
+\subsection{Front-end}
+The front-end is implemented using \textit{angular.js} and \textit{Bootstrap3}. Included in the HTML file are URL source links for the \textit{angular.js} library, the \textit{Bootstrap} stylesheets and a \textit{jQuery} plugin. This means that the user merely needs to open the HTML file, which will run if the user has internet access. No additional programs need to be installed.\\ \\
+For coding the front-end framework, the text editor \textit{Brackets} was used.
+
+\subsection{Back-end}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\nocite{*}
+
+
+%{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
+
+\end{document}
+
+" vim: ts=4
+" vim: tw=78
+" vim: autoindent
+" vim: shiftwidth=4
