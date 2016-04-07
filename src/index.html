@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="taxi">
+    
+    
+<head>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+        <script type="text/javascript" src='app.js'></script>
+</head>
+<body ng-controller="driver as taxi">
+    <li class="list-group-item" ng-repeat="customer in taxi.jobs |filter: {driverAssigned:false} |orderBy: 'distance' |limitTo: 1" >
+        <h3> 
+            {{customer.name}}
+            <em class="pull-right"> Distance: {{customer.distance}}km</em>
+        </h3>
+       
+        <p> {{customer.description}} </p>
+        <p> Phone: {{customer.phone}} </p>
+        
+        <button>On the way</button>
+        <button>Job complete</button>
+    </li>
+</body>
+
+</html>
