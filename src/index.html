@@ -11,23 +11,23 @@
 
 <body ng-controller="driver as taxiDriver" class="container" ng-init="driver=0; dispatch=0; login=0"> <!--Starting the angular controller-->
     
-    <h1>WitsCABS <em class="pull-right"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#selectview" ng-show='login' ng-click="dispatch = 0; driver = 0; login = 0">Log Out</button></em></h1>
+    <h1>WitsCABS <em class="pull-right"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#selectview" ng-show='login' ng-click="dispatch = 0; driver = 0; login = 0">Log Out</button></em></h1> <!--create logout button-->
 
     <!--Beginning of login modal-->
     <div id="selectview" class="modal fade" role="login">
         
-        <div class="modal-dialog">
+        <div class="modal-dialog"> <!--Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Login As</h4>
+                    <h4 class="modal-title">Login As</h4> <!-- login button-->
                 </div>
                 <div class="modal-body">
-                    <p> <button type="button" class="btn btn-primary btn-block" ng-click="driver =1 ; dispatch =0; login =1" data-dismiss="modal">Driver</button></p>
-                    <p> <button type="button" class="btn btn-primary btn-block" ng-click="dispatch =1; driver =0; login =1" data-dismiss="modal">Dispatch</button></p>
+                    <p> <button type="button" class="btn btn-primary btn-block" ng-click="driver =1 ; dispatch =0; login =1" data-dismiss="modal">Driver</button></p> <!-- click to go to driver interface-->
+                    <p> <button type="button" class="btn btn-primary btn-block" ng-click="dispatch =1; driver =0; login =1" data-dismiss="modal">Dispatch</button></p> <!-- click to go to DCC interface-->
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="login = 0">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="login = 0">Close</button> <!--close button to exit logon-->
                 </div>
             </div>
         </div>
@@ -35,10 +35,10 @@
     </div>
     
     <!--Default state before login-->
-    <div ng-hide='login'>
+    <div ng-hide='login'> <!--if not logged in, show default state-->
     
         <h1 >Please log in to proceed</h1>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#selectview" ng-click="dispatch = 0; driver = 0 login=1">Log In</button>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#selectview" ng-click="dispatch = 0; driver = 0 login=1">Log In</button> <!--brings up login modal-->
         
     </div>
 
