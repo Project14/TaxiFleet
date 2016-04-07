@@ -1,13 +1,42 @@
 (function() {
-  var app = angular.module('taxi', []);
+  var app = angular.module('witsCABS', []);
 
-  app.controller('driver', function(){
+  app.controller('JobController', function(){
     this.jobs = customers;
+    
   });
 
-  var customers = [
-    { name: 'customer1', distance: 5, phone: 1234567890 , description: 'Airport', driverAssigned: true }, 
-    { name: 'customer2', distance: 2, phone: 0987654321 , description: 'Train Station', driverAssigned: false },
-    { name: 'customer3', distance: 10, phone: 1029384756 , description: 'Library', driverAssigned: false }
-  ];
+
+  var customers = [{
+      name: 'Aragorn',
+      destination: "The Prancing Pony",
+      currentLocation: "Rivendell",
+      distance: 42,
+      price: 70,
+      phoneNumber: 8479101934,
+      jobActive: true,
+      driverAssigned: true
+      
+    }, {
+      name: 'Frodo',
+      destination: "Mordor",
+      currentLocation: "Hobbiton",
+      price: 22.90,
+      distance: 6,
+      phoneNumber: 7967387834,
+      jobActive: true,
+      driverAssigned: false
+      
+      
+    }, {
+      name: 'Gimli',
+      desination: "Helms Deep",
+      currentLocation: "Rivendell",
+      price: 1100,
+      distance: 200,
+      phoneNumber: 7589431769,
+      jobActive: true,
+      driverAssigned: false
+      
+    }];
 })();
