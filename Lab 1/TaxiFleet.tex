@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% witseiepaper-2005.tex
+%
+%                       Ken Nixon (12 October 2005)
+%
+%                       Sample Paper for ELEN417/455 2005
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,twocolumn]{witseiepaper}
+
+%
+% All KJN's macros and goodies (some shameless borrowing from SPL)
+\usepackage{KJN}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\title{FLEET OF TAXI SERVICE MANAGEMENT SYSTEM - LABORATORY EXERCISE 1}
+
+\author{Danielle Winter (563795), Frederick Nieuwoudt (386372), Stephen Friedman (360938) \& Sello Molele (0604606X)}
+\thanks{School of Electrical \& Information Engineering, University of the
+Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\maketitle
+\thispagestyle{empty}\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{Introduction}
+A software database system for taxi service delivery is proposed. The objective of the system is to respond to a customer request for transport to a location from another specified location at a specified time. The database system will then find the closest available driver for the job and deploy their taxi for service. 
+
+\section{Front End}
+The front end of the system is presented as a user interface to customers. The front end takes in customer requests as the input and returns a list of available taxis and predicted journey time as well as delay until taxi arrival. 
+The front end shall be coded in html using angular.js.
+\\
+The front end of the system will be managed by Danielle Winter and Frederick Nieuwoudt.
+
+\section{Back End}
+The back end of the system is a SQL database. It will store details about drivers, customers, cost and will keep historic data. For drivers it will need to store at least the driver's availability, location, personal details (including photograph) and car details (including number plate). For customers, at least basic information is stored, such as name, cellphone, location and payment details. A standardised cost per kilometer will be specified and the travel expense for the customer calculated according to the distance travelled. A link between driver and customer, along with start and end locations will be stored in order to track historic information.
+\\
+The back end of the system will be implemented by Sello Molele and Stephen Friedman.
+
+\section{Business Logic}
+When the application receives a new request for travel, it will determine the closest available driver to potentially assign to the task. Based on the length and location of the route, the customer will then be shown the cost and reject or accept the order. On completion, the customer will be charged for the trip.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\nocite{*}
+%\bibliographystyle{witseie}
+%\bibliography{sample}
+
+%{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
+
+\end{document}
+
+" vim: ts=4
+" vim: tw=78
+" vim: autoindent
+" vim: shiftwidth=4
