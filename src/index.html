@@ -7,8 +7,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
         <script type="text/javascript" src='app.js'></script>
 </head>
-<body ng-controller="driver as taxi">
-    <li class="list-group-item" ng-repeat="customer in taxi.jobs |filter: {driverAssigned:false} |orderBy: 'distance' |limitTo: 1" >
+<body ng-controller="driver as taxi"> <!--Starting the angular controller-->
+    <li class="list-group-item" ng-repeat="customer in taxi.jobs |filter: {driverAssigned:false} |orderBy: 'distance' |limitTo: 1" > <!-- List the closest customer with no driver assigned-->
         <h3> 
             {{customer.name}}
             <em class="pull-right"> Distance: {{customer.distance}}km</em>
