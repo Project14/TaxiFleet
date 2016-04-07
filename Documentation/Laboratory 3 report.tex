@@ -34,7 +34,7 @@
 
 \title{ELEN4009 SOFTWARE ENGINEERING LABORATORY 3}
 
-\author{Danielle Winter (563795), Frederick Nieuwoudt (386372), Stephen Friedman (), Sello Molele ()
+\author{Danielle Winter (563795), Frederick Nieuwoudt (386372), Stephen Friedman (360938), Sello Molele (0604606x)
 \thanks{School of Electrical \& Information Engineering, University of the
 Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 }
@@ -88,17 +88,32 @@ Danielle Winter:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Back-end}
-
+The back-end database was coded by Stephen Friedman. Compilation of research into Apache configuration was done by Sello Molele.
+\\ \\
+Stephen Friedman:
+\begin{itemize}
+\item Database design and construction
+\item Research into server configuration
+\end{itemize}
+Sello Molele:
+\begin{itemize}
+\item Verification of research
+\item Compilation of research
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagebreak
 \section{USING THE SOFTWARE}
 \subsection{Front-end}
 The front-end is implemented using \textit{angular.js} and \textit{Bootstrap3}. Included in the HTML file are URL source links for the \textit{angular.js} library, the \textit{Bootstrap} stylesheets and a \textit{jQuery} plugin. This means that the user merely needs to open the HTML file, which will run if the user has internet access. No additional programs need to be installed.\\ \\
-For coding the front-end framework, the text editor \textit{Brackets} was used.
+For coding, the front-end framework, the text editor \textit{Brackets} was used.
 
 \subsection{Back-end}
-
-
+The back-end is implemented using an \textit{Apache} web server and a \textit{SQLite} database on Ubuntu. In the live version of the product, both \textit{Apache} and \textit{SQLite} will need to be installed for the back-end to function. The demonstration illustrates the behaviour of the database through the SQL Query for all active calls that have been logged and not yet completed.
+\\ \\
+To run the query, ensure that \textit{SQLite} is installed. This can be done by running the command \textit{sudo apt-get sqlite3} in the linux terminal. \textit{SQLite} is started by running \textit{sqlite3}. The demonstration data is initialised by running \textit{.read CreateSampleDatabase.sql}. The script is called by running \textit{.read GetActiveJobs.sql}. Note that SQLite is incapable of performing the square root function, so squared values involving distance are returned, to be square rooted before being displayed.
+\\ \\
+For coding, \textit{SQLiteStudio} was used.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %\nocite{*}
