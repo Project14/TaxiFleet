@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="taxi" lang="en">
+<html ng-app="witsCABS" lang="en">
    
 <head>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -9,7 +9,7 @@
     <script type="text/javascript" src='app.js'></script> 
 </head>
 
-<body ng-controller="driver as taxiDriver" class="container" ng-init="driver=0; dispatch=0; login=0"> <!--Starting the angular controller-->
+<body ng-controller="JobController as taxiDriver" class="container" ng-init="driver=0; dispatch=0; login=0"> <!--Starting the angular controller-->
     
     <h1>WitsCABS <em class="pull-right"><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#selectview" ng-show='login' ng-click="dispatch = 0; driver = 0; login = 0">Log Out</button></em></h1> <!--create logout button-->
 
@@ -46,26 +46,46 @@
     <div class="panel panel-info" ng-repeat="customer in taxiDriver.jobs |filter: {driverAssigned:false} |orderBy: 'distance' |limitTo: 1" ng-show= "driver"> <!-- List the closest customer with no driver assigned-->
         
         <div class="panel-heading">
-        <h2> 
-            {{customer.name}}
-            <em class="pull-right"> Distance: {{customer.distance}}km</em>
-        </h2>
+            <h2> 
+                {{customer.name}}
+                <em class="pull-right"> Distance: {{customer.distance}}km</em>
+            </h2>
         </div>
 
         <div class="panel-body">
-        <p> {{customer.description}} </p>
-        <p> Phone: {{customer.phone}} </p>
-
-        <button type="button" class="btn btn-default">On the way</button>
-        <button type="button" class="btn btn-info">Job complete</button>
+            <p> Current Location: {{customer.currentLocation}}</p>
+            <p> Destination: {{customer.destination}} </p>
+            <p> Phone: {{customer.phoneNumber}} </p>
+            <p> Fare: {{customer.price | currency:"R":2}}</p>
+            <button type="button" class="btn btn-default">On the way</button>
+            <button type="button" class="btn btn-info">Job complete</button>
         </div>
         
     </div>
     <!--Dispatch view after login-->
-    <div ng-show='dispatch'>
-        
-        <p>Dispatch View</p>   
-        
+    <div ng-show= "dispatch">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h1>Active customers:</h1>
+            </div>
+            <div class="panel-body" ng-repeat="customer in taxiDriver.jobs" >
+                <h3 ng-show = "customer.jobActive"> {{customer.name}} <em class="pull-right" >{{customer.price | currency:"R":2}}</em></h3>     
+            </div>
+        </div>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+            <h2>Customer entry form:</h2>
+            </div>
+            <div class="panel-body">
+            <form novalidate class = "customerForm" >
+                Name: <input type = "text" ng-model = "customer.name"/><br />
+                Destination: <input type = "text" ng-model = "customer.destination"/><br />
+                Current location: <input type = "text" ng-model = "customer.currentLocation"/><br />
+                Phone Number: <input type = "tel" ng-model = "customer.phoneNumber"/><br /> 
+                <button type="submit" ng-click="update(customers)" value="Submit" class="btn btn-info">Submit</button>
+            </form>
+            </div>
+        </div>
     </div>
     
 </body>
