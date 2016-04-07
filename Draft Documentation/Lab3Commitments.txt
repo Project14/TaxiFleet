@@ -1,0 +1,10 @@
+Front-End Commitments:
+
+
+
+Back-End Commitments:
+    Research how to set up Apache
+    Research how to set up SQLite
+    Create list of steps to install and configure
+    Create document elaborating on the list above
+    
