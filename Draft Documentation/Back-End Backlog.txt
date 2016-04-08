@@ -1,0 +1,25 @@
+	1. Design Database
+		a. Create List of Tables
+		b. Design Each Table
+	2. Design Interface
+		a. Design Database GET requirements
+		b. Design Database INSERT requirements
+		c. Design Database UPDATE requirements
+	3. Design Web Server requirements
+		a. User Login
+		b. Database Interfacing
+		c. Distance Calculations
+	4. Explore Database Options
+	5. Explore Web Server Options
+	6. Develop Database Structure
+	7. Develop Database Queries
+		a. Develop Database GET calls
+		b. Develop Database INSERT calls
+		c. Develop Database UPDATE calls
+	8. Develop Web Server
+	9. Configure Database
+	10. Configure Server
+	11. Build Database Prototype
+	12. Build Server Prototype
+	13. Test Integration between Server and Database
+	14. Test Integration between Back-End and Front-End
