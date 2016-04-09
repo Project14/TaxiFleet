@@ -1,0 +1,125 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% title page.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Include images
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+\begin{figure}
+\centering
+\includegraphics[scale=0.3]{wits-logo.jpg}
+\end{figure}
+
+\textsc{\LARGE University of the Witwatersrand}\\[0.5cm]
+\textsc{\Large School of Electrical and Information Engineering}\\[0.5cm]
+\textsc{\small Private Bag 3, 2050, Johannesburg, South Africa}\\[0.5cm]
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.5cm]
+{ \huge \bfseries Taxi-cab Service Management System}\\ % Title of your document
+\HRule \\[0.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} 
+\emph{Front End:}\\
+Danielle Winter\\
+Frederick Nieuwoudt\\[0.1cm]
+\emph{Back End:}\\
+Stephen Friedman
+\end{flushleft}
+\end{minipage}
+~
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} 
+\emph{Student Number:} \\
+563795\\
+386372\\[0.6cm]
+360938
+\end{flushright}
+\end{minipage}\\[0.5cm]
+
+{\large 11 April 2016}\\[0.5cm]
+
+\begin{abstract}
+
+\end{abstract}
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\section{PROJECT OVERVIEW}
+\pagenumbering{arabic}
+\subsection{Introduction}
+
+\subsection{Problem Statement}
+The WitsCABS company owns a fleet of taxi-cabs and employs drivers for customer transportation within a city. The city is demarcated into service zones with a single taxi-stand in each service zone. Cab drivers wait for clients at their closest taxi-stand. Each driver has a smartphone, embedded with a GPS, maps and navigational tracking and access to the WitsCabs web application. A centralised Dispatch Control Centre (DCC) receives calls from customers and processes the new requests. WitsCABS requires the software application to organise their taxi-fleet, coordinate drivers and manage new job requests.
+
+\subsection{Project Objectives}
+\begin{itemize}
+\item Create the software requirements specification
+\item Create the design documentation for front and back ends
+\item Sprint planning  and retrospective for front and back ends
+\item Implementation of prototype modules for the front end interfaces
+\item Implementation of prototype back-end modules
+\item Implementation of an Agile management technique
+\end{itemize}
+
+\subsection{Stakeholders}
+The project stakeholders are divided into Users, Developers, the Project Manager and the Scrum Master. The respective stakeholders and their roles are documented below.
+\subsubsection{Users}
+Users are categorised into:
+\begin{itemize}
+\item Drivers
+\item DCC agents
+\item Customers
+\end{itemize} 
+Drivers operate the taxi-cabs, are assigned jobs and pick up and deliver customers. They have access to a driver-specific front-end interface of the WitsCABS application and are able to specify when they accept a job or are on their way as well as state when they have completed a job. Drivers have access to the WitsCABS application through a smart-phone. They also have access to GPS and map navigation and are under navigational tracking. \\\\
+
+DCC agents operate the WitsCABS call centre and have computer access to a DCC-specific interface of the WitsCABS application. They have the ability to add new clients to the database and can view active jobs. \\\\
+
+Customers phone in to the DCC and provide their details, current location and destination. They are assigned a driver, told a likely departure time and given a cost fort heir journey.
+
+\subsubsection{Developers}
+Developers of the WitsCABS application are responsible for the front and back end implementation as well as documentation for the system. The developers are:
+\begin{itemize}
+\item Frederick Nieuwoudt (front end)
+\item Danielle Winter (front end)
+\item Stephen Friedman (back end)
+\item Sello Molele (back end)
+\end{itemize} 
+Frederick Nieuwoudt and Danielle Winter implemented and documented the prototype front end for the system using \textit{angular.js} and \textit{Twitter Bootstrap}. A pair programming approach was used for the implementation.\\\\
+
+
+\newpage
+\section{Front End}
+
+\newpage
+\section{Back End}
+
+
+\end{document}
