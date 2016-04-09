@@ -1,0 +1,10 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: Software Requirements Specification.aux
+The style file: witseie.bst
+I couldn't open database file TaxiFleet.bib
+---line 30 of file Software Requirements Specification.aux
+ : \bibdata{TaxiFleet
+ :                   }
+I'm skipping whatever remains of this command
+I found no database files---while reading file Software Requirements Specification.aux
+Warning--I didn't find a database entry for "SoftwareEngTextbook"
+(There were 2 error messages)

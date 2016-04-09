@@ -1,0 +1,151 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% witseiepaper-2005.tex
+%
+%                       Ken Nixon (12 October 2005)
+%
+%                       Sample Paper for ELEN417/455 2005
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,twocolumn]{witseiepaper}
+
+%
+% All KJN's macros and goodies (some shameless borrowing from SPL)
+\usepackage{KJN}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\title{FLEET OF TAXI SERVICE MANAGEMENT SYSTEM - LABORATORY EXERCISE 2: SOFTWARE REQUIREMENTS SPECIFICATION}
+
+\author{Danielle Winter (563795), Frederick Nieuwoudt (386372), Stephen Friedman (360938) \& Sello Molele (0604606X)}
+\thanks{School of Electrical \& Information Engineering, University of the
+Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\maketitle
+\thispagestyle{empty}\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{Introduction}
+A software database system for a Taxi Fleet Management is proposed in this Software Requirements Specification. The objective of this document is to describe in detail the user requirements as well as the specifics of what the system requires and how it will be developed.\\\\
+The aim of the system is to respond to a customer request for transport to a location. It will then find an available driver for the job and deploy their taxi for service. It will also allow for users to manage profiles and administrators to manage diver profiles.
+
+\subsection{Definitions}
+
+\subsubsection{Customer:}
+The person who falls part of the target market of the proposed product. This is the person who is utilizing the services provided by the system.
+
+\subsubsection{Dispatch Agent:}
+The person, or person who are required to operate the dispatch control center. They are responsible for answering customer phone calls and capturing data.
+
+
+\subsection{Scope}
+
+The taxi fleet management system is a tool that provides a service where a customer can request a taxi via a phone call to the dispatch control center and an appropriate driver will be routed to them.\\\\
+The system back-end will be required to store information about drivers, customers, and the current pricing scheme. The system will keep historical data regarding trips that have been taken for auditing and dispute resolution.\\\\
+The system front end will be presented in the form of a web interface. This will provide a means for dispatching agent to input the customer's current location and destination. The web interface must also provide a means for the taxi driver to access information about the job that has been allocated to them.
+
+\section{Overall Project Description}
+
+\subsection{User Requirements}
+A brief description of the different users and their basic requirements is given. Furthermore, potential users were surveyed for additional requirements. The user requirements are specified based on the MOSCOW and FURPS methodologies \cite{SoftwareEngTextbook}.
+
+\subsubsection{Basic User Requirements}
+\begin{itemize}
+\item Passengers
+\begin{itemize}
+\item Lift Requests 
+\end{itemize}
+
+\item Drivers
+\begin{itemize}
+\item Receive allocated job card
+\item View relevant customer details
+\item Respond to the job card 
+\end{itemize}
+
+\item Dispatch Control Center Agents
+\begin{itemize}
+\item Capture customer details
+\item View active job cards
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Detailed User Requirements}
+Passenger 
+\begin{itemize}
+\item Lift Request
+\begin{itemize}
+\item Passengers should be able to request a taxi driver through making a phone call to the dispatch control center.
+\item Passengers must provide their current location and their intended destination.
+\end{itemize}
+\end{itemize}
+
+Driver
+\begin{itemize} 
+\item Receiving Allocated Job Card
+\begin{itemize}
+\item Only the assigned customer must be displayed. This prioritized by the distance from the driver.
+\end{itemize}\
+
+\item Viewing relevant customer details
+\begin{itemize}
+\item The driver must be able to view the customers current location.
+\item The client's destination must be displayed.
+\item The client's contact details must be displayed.
+\item The calculated fare for the trip must be available.
+\end{itemize}\
+
+\item  Responding to allocated job card
+\begin{itemize}
+\item In response to an allocated job card a driver must be able to indicate when he is on the way to the customer.
+\item A driver must be able to indicate when the job has been completed.
+\end{itemize}\
+
+\item Capturing customer details.
+\begin{itemize}
+\item A dispatch control center agent must be able to capture client data by inputting it into the provide web interface.
+\item Agents must be able to view information on currently active jobs. including currently assigned driver and the job specifics.
+\end{itemize}
+\end{itemize}
+
+\subsection{Testing Plan}
+
+To achieve a quality product the test driven development(TDD) paradigm will be adopted. TDD calls for the writing of tests before writing the code to be used in the implementation. This encourages simple modular code.\\\\
+ The TDD workflow follows the sequence of writing a test, validating that the new test fails, writing the application code, running all the tests together, and then refactoring. This sequence allows for the project to move from getting code working to refactoring the code into simple understandable modules.
+
+\subsection{Implementation Plan}
+
+Following the Scrum SDLC methodology, will provide shippable incrementally improved products. A minimum of required features will be needed for a product that can meet the project scope as defined above. Additional functionality can be incrementally provided over the life span of the product.
+
+\subsection{Constraints}
+
+\subsection{Assumptions and Dependencies}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\nocite{*}
+\bibliographystyle{witseie}
+\bibliography{TaxiFleet}
+
+%{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
+
+\end{document}
+
+" vim: ts=4
+" vim: tw=78
+" vim: autoindent
+" vim: shiftwidth=4
