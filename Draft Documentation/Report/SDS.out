@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{INTRODUCTION}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Purpose of this Document}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Project Scope}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Definitions}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.3.1}{Definitions}{subsection.1.3}% 5
+\BOOKMARK [3][-]{subsubsection.1.3.2}{Abbreviations}{subsection.1.3}% 6
+\BOOKMARK [1][-]{section.2}{SYSTEM ARCHITECTURE}{}% 7
+\BOOKMARK [2][-]{subsection.2.1}{Front-end Views}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.1}{DCC View}{subsection.2.1}% 9
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Driver View}{subsection.2.1}% 10
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Log-in View}{subsection.2.1}% 11
+\BOOKMARK [2][-]{subsection.2.2}{Back-end Implementation}{section.2}% 12
+\BOOKMARK [1][-]{section.3}{DETAILED ARCHITECTURE AND FEATURES}{}% 13
