@@ -122,11 +122,77 @@ The Scrum Master for the project is Frederick Nieuwoudt. Their responsibilities 
 \newpage
 \section{PART A: FRONT-END}
 \subsection{SRS}
-The software requirements specification quantifies the scope and success criteria for this project.\\
+The software requirements specification quantifies the scope and success criteria for this project. \\ 
 
-The required elements of the project discussed in the SRS that were successfully implemented include.
+The required elements of the front-end of the project as discussed in the SRS that were successfully implemented into the demonstrable prototype include:
+\begin{itemize}
+\item The log-in page
+\item The driver active job view
+\item The dispatch agent data entry form
+\item The dispatch agent active jobs view
+\end{itemize}
+With the inclusion of these modules into the prototype allows for the demonstration of the basic work-flow set out for the users of the application.\\
+
+The modules that have yet to be implemented in future sprints that have been laid out in the SRS include:
+\begin{itemize}
+\item Adding GPS functionality to the application
+\end{itemize}
+
+The major downfalls according to the SRS was the lack of test driven development. This was specified in the SRS as the testing plan to be followed.
 \subsection{SDS}
+The Software Design Specification document details the different components  of the front-end system and gives the relevant modules, controllers, directives and expressions used for the js file. The required components for the HTML code are described. All required data types are stated for mentioned variables. \\\\
+The SDS document describes the base functionality of the system, but does not elaborate on any other features to be added at a later date. For example the automatic navigation update in the driver panel has not been elaborated upon. This is due to time constraints in implementing the project and the fact that these additional features were added at a later date. For future work, the SDS must be updated to include these modules.
 \subsection{Prototype Implementation}
+The basic functionality of the described system was implemented in angular.js and html code. The respective views for the different users of the product were created. Figure 1 and 2 show the DCC view for the system and Figure 3 shows the driver view. The log-in modal view is shown in Figure 4. These views were coded and implemented according to the requirements given in the SDS and SRS. The log-in modal was added as an additional feature for the system. These views satisfactorily represent the front-end product for the WitsCABS application and are a fair indicator of the final system functionality. \\\\
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{DCC active panel.png}
+\caption{DCC view with active customers panel.}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{new customer form.png}
+\caption{DCC view with new customer form.}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{driver view.png}
+\caption{Driver interface view.}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{login screen and pop up.png}
+\caption{Log-in view with pop-up modal.}
+\end{figure}
+
+
+The front-end is implemented using angular.js and Bootstrap3. Included in the HTML file are URL source links for the angular.js library, the Bootstrap stylesheets and a jQuery plugin. This means that the user merely needs to open the HTML file, which will run if the user has internet access. No additional programs need to be installed. For coding, the front-end framework, the text editor Brackets was used. The front-end views for the driver and DCC interfaces were coded by Danielle Winter and Frederick Nieuwoudt.A pair programming method was used for implementing this system. The work breakdown for the prototype implementation is given below:
+
+\begin{itemize}
+\item Frederick Nieuwoudt (Scrum Master):
+\begin{itemize}
+\item Driver interface implementation
+\item Login/log-off
+\item Commenting DCC code
+\item System aesthetics
+\item System modifications
+\end{itemize}
+\item Danielle Winter (project manager):
+\begin{itemize}
+\item Driver interface commenting
+\item Login/log-off commenting
+\item DCC interface implementation
+\item System aesthetics
+\item System modifications
+\end{itemize}
+\end{itemize}
+
+
+
 \subsection{Product Backlog}
 \begin{tabular}{|c|l|c|}
 \hline 
@@ -151,7 +217,37 @@ General & Log-in page & 5\\
 \hline
 \end{tabular} 
 \subsection{Sprint Planning}
+Sprint planning was undertaken to divide tasks in such a way that the most efficient path was taken.\\
+
+In order to achieve this the task back log was represented on a gantt chart in order to visualize the product dependencies and which tasks could happen in parallel. The produced gantt char is available in the figure below.\\
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{gantt.png}
+\caption{Gantt chart showing all required tasks and their dependencies.}
+\end{figure}
+The tasks were divided according to whether they were on the critical path or not. Creating the views for specific users was the most important for the success of the prototype. Tasks such and login authentication and the addition of Google maps functionality were not critical to the creation of a prototype that can visually demonstrate the final product.
 \subsection{Sprint Retrospective}
+Three sprints were completed to produce the presented front-end prototype. The features implemented in each sprint has been cataloged in the table below.\\
+
+\begin{tabular}{|c|l|c|}
+\hline 
+Sprint & Features\\ 
+\hline 
+ 1 & Create basic interface framework\\ 
+• & Set up AngularJS customer directive\\
+
+\hline 
+ 2 & Driver assigned job panel\\
+• & Create default login page\\
+• & Create login modal\\
+\hline 
+ 3 & Add DCC active jobs panel \\ 
+ • & Add DCC customer form panel\\
+ 
+
+\hline
+\end{tabular} 
 
 
 
