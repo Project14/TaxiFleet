@@ -140,7 +140,59 @@ The modules that have yet to be implemented in future sprints that have been lai
 
 The major downfalls according to the SRS was the lack of test driven development. This was specified in the SRS as the testing plan to be followed.
 \subsection{SDS}
+The Software Design Specification document details the different components  of the front-end system and gives the relevant modules, controllers, directives and expressions used for the js file. The required components for the HTML code are described. All required data types are stated for mentioned variables. \\\\
+The SDS document describes the base functionality of the system, but does not elaborate on any other features to be added at a later date. For example the automatic navigation update in the driver panel has not been elaborated upon. This is due to time constraints in implementing the project and the fact that these additional features were added at a later date. For future work, the SDS must be updated to include these modules.
 \subsection{Prototype Implementation}
+The basic functionality of the described system was implemented in angular.js and html code. The respective views for the different users of the product were created. Figure 1 and 2 show the DCC view for the system and Figure 3 shows the driver view. The log-in modal view is shown in Figure 4. These views were coded and implemented according to the requirements given in the SDS and SRS. The log-in modal was added as an additional feature for the system. These views satisfactorily represent the front-end product for the WitsCABS application and are a fair indicator of the final system functionality. \\\\
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{DCC active panel.png}
+\caption{DCC view with active customers panel.}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{new customer form.png}
+\caption{DCC view with new customer form.}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{driver view.png}
+\caption{Driver interface view.}
+\end{figure}
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{login screen and pop up.png}
+\caption{Log-in view with pop-up modal.}
+\end{figure}
+
+
+The front-end is implemented using angular.js and Bootstrap3. Included in the HTML file are URL source links for the angular.js library, the Bootstrap stylesheets and a jQuery plugin. This means that the user merely needs to open the HTML file, which will run if the user has internet access. No additional programs need to be installed. For coding, the front-end framework, the text editor Brackets was used. The front-end views for the driver and DCC interfaces were coded by Danielle Winter and Frederick Nieuwoudt.A pair programming method was used for implementing this system. The work breakdown for the prototype implementation is given below:
+
+\begin{itemize}
+\item Frederick Nieuwoudt (Scrum Master):
+\begin{itemize}
+\item Driver interface implementation
+\item Login/log-off
+\item Commenting DCC code
+\item System aesthetics
+\item System modifications
+\end{itemize}
+\item Danielle Winter (project manager):
+\begin{itemize}
+\item Driver interface commenting
+\item Login/log-off commenting
+\item DCC interface implementation
+\item System aesthetics
+\item System modifications
+\end{itemize}
+\end{itemize}
+
+
+
 \subsection{Product Backlog}
 \begin{tabular}{|c|l|c|}
 \hline 
