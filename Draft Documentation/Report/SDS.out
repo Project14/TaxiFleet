@@ -10,4 +10,12 @@
 \BOOKMARK [3][-]{subsubsection.2.1.2}{Driver View}{subsection.2.1}% 10
 \BOOKMARK [3][-]{subsubsection.2.1.3}{Log-in View}{subsection.2.1}% 11
 \BOOKMARK [2][-]{subsection.2.2}{Back-end Implementation}{section.2}% 12
-\BOOKMARK [1][-]{section.3}{DETAILED ARCHITECTURE AND FEATURES}{}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Web Server}{subsection.2.2}% 13
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Database}{subsection.2.2}% 14
+\BOOKMARK [1][-]{section.3}{DETAILED ARCHITECTURE AND FEATURES}{}% 15
+\BOOKMARK [2][-]{subsection.3.1}{Front-end Architecture}{section.3}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.1}{angular.js File}{subsection.3.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.1.2}{HTML File}{subsection.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.2}{Back-end Architecture}{section.3}% 19
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Database}{subsection.3.2}% 20
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Detailed Database Table Structure}{subsection.3.2}% 21

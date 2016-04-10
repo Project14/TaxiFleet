@@ -68,6 +68,16 @@ The driver view allows the driver to see their assigned job, the customer name a
 The log-in page gives the user the ability to select whether they are a driver or a DCC agent and allows them to log in to their respective view. The log-in page should prompt users for a username and password and their entry should be authenticated through the back-end.
 
 \subsection{Back-end Implementation}
+The back-end of the WitsCABS application consists of two main parts. The part that directly interfaces with the front-end is an Apache web server which runs on Ubuntu and executes Python scripts in order to interact with the database and external APIs. The part of the back-end that stores the data is an SQLite database.
+
+\subsubsection{Web Server}\mbox{}\\
+The role of the web server in the WitsCABS application is primarily to act as an intermediary between the front-end and the database. It is also required to connect to external APIs in order to deliver functionality that would be too complex to implement in the application.\\ \\
+The three external APIs are Paym8, SMSPortal and Google Maps. The Paym8 API is used to charge customers for Trips that are taken using WitsCABS. The SMSPortal API is used to notify Customers about the status of their Driver. The Google Maps API is used to translate addresses in to GPS Coordinates, as well as route from one location to another and determine the real distance between two points.
+
+\subsubsection{Database}\mbox{}\\
+The role of the database in the WitsCABS application is to store data so that different users can interact with the same data without directly transmitting the data between each other and so that data can be kept for auditing and dispute resolution if need be.
+\\ \\
+For the database queries, either many simple queries could be implemented or few complex queries could be implemented. Complex queries were chosen as they take advantage of optimisation in SQL. Complex queries require more development and testing time, but once implemented and verified produce faster results than many simple queries.
 
 \section{DETAILED ARCHITECTURE AND FEATURES}
 \subsection{Front-end Architecture}
@@ -90,7 +100,7 @@ The front-end architecture is detailed below for the angular.js and HTML files. 
 \end{itemize}
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{HTML File:}
+\subsubsection{HTML File}\mbox{}\\
 
 When DCC agents submit a new customer in the form, the back-end database is updated and a taxi-driver is assigned to the new job. The driver interface will be updated. Drivers can state when a job is complete, at which point, the database will once again be updated and the respective views refreshed. Upon log-in details being entered, authentication is implemented through the back-end framework before users can be redirected to their respective pages.
 \begin{itemize}
@@ -135,7 +145,134 @@ When DCC agents submit a new customer in the form, the back-end database is upda
 
 
 \subsection{Back-end Architecture}
-*for Stephen and Sello to describe
+\subsubsection{Database}\mbox{}\\
+The database consists of the following tables:
+\begin{itemize}
+\item Users: This table contains information to verify a User when they log in. The users' username and hashed password are stored. The hash of the password is stored so that nobody that has access to the WitsCABS database can compromise the users' passwords.
+\item Agents: This table contains the real name of DCC agents and is used by the login process to determine if the user is a DCC agent.
+\item Drivers: This table contains the real name of Drivers and is used by the login process to determine if the user is a Driver. This table also keeps track of the status and location of the Driver so that the best driver is chosen for each Trip.
+\item Cost: This table contains rates that can apply to trips.
+\item Customers: This table contains details for Customers, including contact information for SMS notification and financial information in order to charge Customers for Trips that are taken.
+\item Locations: This table stores addresses against GPS coordinates, so that friendly names can used for informative purposes, while accurate GPS coordinates can be used for distance calculations.
+\item Trips: This table contains information relating to each Trip undertaken. It allows DCC agents to view all active Trips, it allows Drivers to be easily assigned to Trips and it allows for the retention of historical data for auditing or dispute resolution purposes.
+\end{itemize}
+
+\subsubsection{Detailed Database Table Structure}
+\subsection*{Users:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+UserId & Int & Primary Key, Auto-increment\\
+\hline 
+UserName & Text & Login Name of User\\
+\hline 
+PasswordHash & Text & Password, hashed to prevent unauthorised use\\
+\hline
+\end{tabular}
+
+\subsection*{Agents:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+AgentId & Int & Primary Key, Auto-increment\\
+\hline 
+UserId & Int & Foreign Key\\
+\hline 
+Name & Text & Real name of DCC agent\\
+\hline
+\end{tabular}
+
+\subsection*{Drivers:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+DriverId & Int & Primary Key, Auto-increment\\
+\hline 
+UserId & Int & Foreign Key\\
+\hline 
+Name & Text & Real name of Driver\\
+\hline
+CurrentLocationId & Int & Foreign Key\\
+\hline
+CurrentlyActive & Bit & Indicates if a driver is at work or not\\
+\hline
+CurrentlyAssigned & Bit & Indicates if driver is busy with a Trip\\
+\hline
+\end{tabular}
+
+\subsection*{Cost:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+CostId & Int & Primary Key, Auto-increment\\
+\hline 
+Type & Text & Friendly description of Cost\\
+\hline 
+AmountInCents & Int & Money is indicated to 2 decimal places, so to avoid rounding issues,\\
+• & • & work with money as an integer number of cents and divide by\\ 
+• & • & 100 before displaying in order to show an amount in Rands\\
+\hline
+\end{tabular}
+
+\subsection*{Customers:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+CustomerId & Int & Primary Key, Auto-increment\\
+\hline 
+Name & Text & Real name of Customer\\
+\hline
+PhoneNumber & Text & Contact number of Customer\\
+\hline
+CreditCardNumber & Text & Financial information of Customer\\
+\hline
+CreditCardType & Text & Financial information of Customer\\
+\hline
+CVV & Text & Financial information of Customer\\
+\hline
+\end{tabular}
+
+\subsection*{Location:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+LocationId & Int & Primary Key, Auto-increment\\
+\hline 
+LocationName & Text & Friendly name of the Location\\
+\hline
+GPSLat & Int & GPS Latitude, stored in seconds\\
+\hline
+GPSLon & Int & GPS Longitude, stored in seconds\\
+\hline
+\end{tabular}
+
+\subsection*{Trip:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+TripId & Int & Primary Key, Auto-increment\\
+\hline 
+CustomerId & Int & Foreign Key\\
+\hline 
+StartLocationId & Int & Foreign Key\\
+\hline 
+EndLocationId & Int & Foreign Key\\
+\hline 
+DriverId & Int & Foreign Key\\
+\hline 
+CostId & Int & Foreign Key\\
+\hline 
+Active & Bit & Indicates if the Trip is under-way or if it has been completed\\
+\hline
+\end{tabular}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %\nocite{*}
