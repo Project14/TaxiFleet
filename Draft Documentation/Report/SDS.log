@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.22)  10 APR 2016 12:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.22)  10 APR 2016 13:44
 entering extended mode
 **SDS.tex
 (SDS.tex
@@ -360,7 +360,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--142
 
  []
 
-[3]
+[3] [4]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ¢ in font cmr10!
@@ -375,24 +375,24 @@ Missing character: There is no € in font cmr10!
 Missing character: There is no ¢ in font cmr10!
 
 No file SDS.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
-[4] [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
+[5]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
  (SDS.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
 Package rerunfilecheck Info: File `SDS.out' has not changed.
-(rerunfilecheck)             Checksum: 5CE150554993402DEC6ECA1310086C8A;1461.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 284.
+(rerunfilecheck)             Checksum: F038F59274D9AB5CDFFA1EBF312EDF2E;1532.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
  ) 
 Here is how much of TeX's memory you used:
- 5732 strings out of 493698
- 82811 string characters out of 3144406
- 175209 words of memory out of 3000000
- 8945 multiletter control sequences out of 15000+200000
+ 5734 strings out of 493698
+ 82851 string characters out of 3144406
+ 173209 words of memory out of 3000000
+ 8946 multiletter control sequences out of 15000+200000
  26188 words of font info for 91 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 36i,6n,30p,525b,431s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,6n,30p,525b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -400,9 +400,9 @@ s/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsl8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
-Output written on SDS.pdf (5 pages, 117305 bytes).
+Output written on SDS.pdf (5 pages, 118868 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 34 named destinations out of 1000 (max. 500000)
- 169 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 158 PDF objects out of 1000 (max. 8388607)
+ 35 named destinations out of 1000 (max. 500000)
+ 177 words of extra memory for PDF output out of 10000 (max. 10000000)
 

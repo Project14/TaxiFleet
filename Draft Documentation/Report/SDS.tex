@@ -145,6 +145,85 @@ When DCC agents submit a new customer in the form, the back-end database is upda
 
 
 \subsection{Back-end Architecture}
+\subsubsection{Web Server}\mbox{}\\
+The Web Server functions primarily as an intermediary between the front-end and the database. It fulfils this role through a collection of interfaces that the front-end can access. The Interfaces are as follows:
+\begin{itemize}
+\item Login: This is to check that the User attempting to log in is a valid User and check which type of User it is, if successful.
+	\begin{itemize}
+	\item Inputs:
+		\begin{itemize}
+		\item UserName - A string containing the User's login name
+		\item PasswordHash - A string containing the User's hashed password
+		\end{itemize}
+	\item Output:
+		\begin{itemize}
+		\item String containing either "Driver", "Agent", or "Rejected" 
+		\end{itemize}
+	\end{itemize}
+\item GetActiveTrips: This is to retrieve a list of all Trips that are currently active.
+	\begin{itemize}
+	\item Inputs:
+		\begin{itemize}
+		\item None required
+		\end{itemize}
+	\item Output:
+		\begin{itemize}
+		\item An array containing Trip objects
+		\end{itemize}
+	\end{itemize}
+	
+\item CreateTrip: This is to store the information about a new trip when a DCC Agent captures it.
+	\begin{itemize}
+	\item Inputs:
+		\begin{itemize}
+		\item StartLocation - A string containing the friendly name of the location
+		\item EndLocation - A string containing the friendly name of the location
+		\item CustomerName - A string containing the Customer's name
+		\item ContactNumber - A string containing the Customer's cell phone number
+		\item CreditCardNumber - A string containing the Customer's credit card number
+		\item CreditCardType - A string containing the Customer's credit card type ("Visa" or "Mastercard" expected)
+		\item CreditCardCvv - A string containing the Customer's credit card CVV number
+		\end{itemize}
+	\item Output:
+		\begin{itemize}
+		\item A boolean indicating if the Trip was created successfully or not
+		\end{itemize}
+	\end{itemize}
+\item GetDriverTrip: This is to retrieve the Trip that is assigned to a particular Driver.
+	\begin{itemize}
+	\item Inputs:
+		\begin{itemize}
+		\item DriverId - an integer indicating the system's internal id of the Driver
+		\end{itemize}
+	\item Output:
+		\begin{itemize}
+		\item A Trip object
+		\end{itemize}
+	\end{itemize}
+\item SendNotification: This is to send an sms to a Customer.
+	\begin{itemize}
+	\item Inputs:
+		\begin{itemize}
+		\item TripId - an integer indicating the system's internal id of the Trip
+		\end{itemize}
+	\item Output:
+		\begin{itemize}
+		\item A boolean indicating if the Customer was notified successfully or not
+		\end{itemize}
+	\end{itemize}
+\item SetTripComplete: This is to indicate that a Trip is completed and that a Customer can be charged and the Driver be made available to take other Trips.
+	\begin{itemize}
+	\item Inputs:
+		\begin{itemize}
+		\item TripId - an integer indicating the system's internal id of the Trip
+		\end{itemize}
+	\item Output:
+		\begin{itemize}
+		\item A boolean indicating if the Trip was successfully marked as completed or not
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
 \subsubsection{Database}\mbox{}\\
 The database consists of the following tables:
 \begin{itemize}

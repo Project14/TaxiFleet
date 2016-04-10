@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.22)  10 APR 2016 12:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.22)  10 APR 2016 12:35
 entering extended mode
 **title_page_1.tex
 (title_page_1.tex
@@ -261,10 +261,10 @@ Missing character: There is no € in font cmr12!
 Missing character: There is no ¢ in font cmr12!
  [9 <./gantt.png>] [10] (title_page_1.aux) ) 
 Here is how much of TeX's memory you used:
- 1191 strings out of 493698
- 15673 string characters out of 3144406
- 73994 words of memory out of 3000000
- 4544 multiletter control sequences out of 15000+200000
+ 1190 strings out of 493698
+ 15659 string characters out of 3144406
+ 73984 words of memory out of 3000000
+ 4543 multiletter control sequences out of 15000+200000
  10659 words of font info for 37 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,6n,19p,670b,268s stack positions out of 5000i,500n,10000p,200000b,50000s
