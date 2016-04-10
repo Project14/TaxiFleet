@@ -64,6 +64,7 @@ Sello Molele
 
 {\large 11 April 2016}\\[0.5cm]
 \newpage
+\pagenumbering{gobble}
 \begin{abstract}
 A software application for a taxi-cab company called WitsCABS is proposed, designed and partially implemented. WitsCABS employs drivers to perform pick-up and drop-off jobs for customers. In order to request a new job, customers phone in to a central Dispatch Control Centre (DCC) and provide their details, after which, a driver is assigned to their request. A web-application was chosen for the front-end framework with a log-in modal and different views for driver users and DCC users. The driver view allows the driver to view their current jobs and supply feedback to the back-end for when they are on their way and when they have completed an assignment. The DCC view allows dispatch call-centre agents to enter new customers into a form and view currently active jobs. The front-end framework was coded in HTML and angular. The back-end framework was implemented using Apache and SQLite and is a database for storing customer and driver information. 
 \end{abstract}
@@ -147,27 +148,27 @@ The SDS document describes the base functionality of the system, but does not el
 \subsection{Prototype Implementation}
 The basic functionality of the described system was implemented in angular.js and html code. The respective views for the different users of the product were created. Figure 1 and 2 show the DCC view for the system and Figure 3 shows the driver view. The log-in modal view is shown in Figure 4. These views were coded and implemented according to the requirements given in the SDS and SRS. The log-in modal was added as an additional feature for the system. These views satisfactorily represent the front-end product for the WitsCABS application and are a fair indicator of the final system functionality. \\\\
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=1\textwidth]{DCC active panel.png}
+\includegraphics[width=1\textwidth]{DCC_active_panel.png}
 \caption{DCC view with active customers panel.}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=1\textwidth]{new customer form.png}
+\includegraphics[width=1\textwidth]{new_customer_form.png}
 \caption{DCC view with new customer form.}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=1\textwidth]{driver view.png}
+\includegraphics[width=1\textwidth]{driver_view.png}
 \caption{Driver interface view.}
 \end{figure}
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=1\textwidth]{login screen and pop up.png}
+\includegraphics[width=1\textwidth]{login_screen_and_pop_up.png}
 \caption{Log-in view with pop-up modal.}
 \end{figure}
 
@@ -297,7 +298,7 @@ The database structure was created by using database diagrams in Microsoft SQL M
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{Database Diagram.png}
+\includegraphics[width=1\textwidth]{Database_Diagram.png}
 \caption{Database diagram of the prototype.}
 \end{figure}
 
@@ -305,7 +306,7 @@ The SQL Query was created in gedit and was designed to illustrate that the data 
 
 \begin{figure}[ht]
 \centering
-\includegraphics[width=1\textwidth]{Query Results.png}
+\includegraphics[width=1\textwidth]{Query_Results.png}
 \caption{Database prototype query results.}
 \end{figure}
 
@@ -355,9 +356,9 @@ General & Test Integration between Server and Database & 2\\
 \subsection{Sprint Planning}
 Sprint planning was done to ensure that tasks would be divided between the available three sprints. The tasks were placed on Gantt chart in order to figure out which tasks were critical and how tasks could be split into three sprints. The split is shown in Figure 8.
 
-\begin{figure}[ht]
+\begin{figure}[!ht]
 \centering
-\includegraphics[width=1\textwidth]{Back End Gantt.png}
+\includegraphics[width=1\textwidth]{Back_End_Gantt.png}
 \caption{Gantt chart showing the Product Backlog. Critical Path tasks are in red.}
 \end{figure}
 
@@ -366,7 +367,7 @@ As both the Web Server and Database tasks are critical, and each task takes 18 d
 \subsection{Sprint Retrospective}
 Three sprints were completed, producing a back-end prototype. The split of which tasks were accomplished in each sprint are shown in Table 4. 
 
-\begin{table}[htb]
+\begin{table}[!htb]
     \caption{Sprint Retrospective of Tasks for Back-end.\label{tab:fonts}}
     \begin{center} 
 \begin{tabular}{|c|l|c|}
