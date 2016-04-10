@@ -63,9 +63,9 @@ Sello Molele
 \end{minipage}\\[0.5cm]
 
 {\large 11 April 2016}\\[0.5cm]
-
+\newpage
 \begin{abstract}
-
+A software application for a taxi-cab company called WitsCABS is proposed, designed and partially implemented. WitsCABS employs drivers to perform pick-up and drop-off jobs for customers. In order to request a new job, customers phone in to a central Dispatch Control Centre (DCC) and provide their details, after which, a driver is assigned to their request. A web-application was chosen for the front-end framework with a log-in modal and different views for driver users and DCC users. The driver view allows the driver to view their current jobs and supply feedback to the back-end for when they are on their way and when they have completed an assignment. The DCC view allows dispatch call-centre agents to enter new customers into a form and view currently active jobs. The front-end framework was coded in HTML and angular. The back-end framework was implemented using Apache and SQLite and is a database for storing customer and driver information. 
 \end{abstract}
 
 \vfill % Fill the rest of the page with whitespace
@@ -194,6 +194,10 @@ The front-end is implemented using angular.js and Bootstrap3. Included in the HT
 \end{itemize}
 
 \subsection{Product Backlog}
+Table 1 shows the product backlog for the front-end of the WitsCABS application including features implemented in the prototype and features still to be added in possible future sprints.\\
+\begin{table}[htb]
+    \caption{Product Backlog Features.\label{tab:fonts}}
+    \begin{center}
 \begin{tabular}{|c|l|c|}
 \hline 
 Interface & Features & Expected Time (Days)\\ 
@@ -215,7 +219,11 @@ General & Log-in page & 5\\
 • & Review user experience design (aesthetics using CSS) & 5\\
 • & Set up google maps API & 5\\
 \hline
-\end{tabular} 
+\end{tabular}
+\end{center}
+\end{table}
+
+
 \subsection{Sprint Planning}
 Sprint planning was undertaken to divide tasks in such a way that the most efficient path was taken.\\
 
@@ -230,8 +238,11 @@ In order to achieve this the task back log was represented on a gantt chart in o
 
 The tasks were divided according to whether they were on the critical path or not. Creating the views for specific users was the most important for the success of the prototype. Tasks such and login authentication and the addition of Google maps functionality were not critical to the creation of a prototype that can visually demonstrate the final product.
 \subsection{Sprint Retrospective}
-Three sprints were completed to produce the presented front-end prototype. The features implemented in each sprint has been cataloged in the table below.\\
+Three sprints were completed to produce the presented front-end prototype. The features implemented in each sprint has been catalogued in Table 2.\\
 
+\begin{table}[htb]
+    \caption{Sprint Retrospective for Front-end.\label{tab:fonts}}
+    \begin{center} 
 \begin{tabular}{|c|l|c|}
 \hline 
 Sprint & Features\\ 
@@ -247,7 +258,8 @@ Sprint & Features\\
  • & Add DCC customer form panel\\
 \hline
 \end{tabular} 
-
+\end{center}
+\end{table}
 
 
 
@@ -255,7 +267,7 @@ Sprint & Features\\
 \newpage
 \section{PART B: BACK-END}
 \subsection{SRS}
-The Software Requirements Specification (SRS) defines the scope and success criteria of the WitsCABS application. \\ \\
+The Software Requirements Specification (SRS) defines the scope and success criteria of the WitsCABS application. \\
 
 The SRS required the following functionality to be present in the WitsCABS application:
 \begin{itemize}
@@ -271,11 +283,11 @@ Further work required is to create scripts capable of extracting or writing any 
 
 The nature of the implementation that was lacking was that it was not test driven. This was specified in the SRS as the testing plan to be followed. Had it been, the script would have been created and the database created to fit the tests.
 \subsection{SDS}
-The Software Design Specification (SDS) document details the different parts of the back-end that are required, namely the Web Server for interfacing with the front-end and the Database for storing data.
+The Software Design Specification (SDS) document details the different parts of the back-end that are required, namely the Web Server for interfacing with the front-end and the Database for storing data. \\
 
-Http interfaces are required for the front-end to interact with the Web Server. These are accessed through GET and POST calls from the front-end. The required inputs and the supplied output of each call is defined in the SDS.
+Http interfaces are required for the front-end to interact with the Web Server. These are accessed through GET and POST calls from the front-end. The required inputs and the supplied output of each call is defined in the SDS. \\
 
-Once created, databases are difficult to alter without compromising the integrity of the data contained inside its tables, so a strict and robust definition of the database is required. The nature of each table, as well as the structure of each table is defined in the SDS.
+Once created, databases are difficult to alter without compromising the integrity of the data contained inside its tables, so a strict and robust definition of the database is required. The nature of each table, as well as the structure of each table is defined in the SDS. \\
 
 The SDS lacks clear definition on how third party APIs will be accessed. This is due to time constraints in implementing the project and the fact that these additional features were added at a later date. For future work, the SDS must be updated to include these modules.
 \subsection{Prototype Implementation}
@@ -311,6 +323,11 @@ sqlite3
 The results of the above query are shown in Figure 7. The demonstration code was created and tested by Stephen Friedman.
 
 \subsection{Product Backlog}
+The WitsCABS application Back-End Product Backlog from the point of designing the initial features to the completion of the prototype is shown in Table 3
+
+\begin{table}[htb]
+    \caption{Product Backlog of Back-end tasks.\label{tab:fonts}}
+    \begin{center} 
 \begin{tabular}{|c|l|c|}
 \hline 
 Component & Task & Expected Time (Days)\\ 
@@ -332,6 +349,8 @@ General & Test Integration between Server and Database & 2\\
 • & Test Integration between Back-End and Front-End & 2\\
 \hline
 \end{tabular}
+\end{center}
+\end{table}
 
 \subsection{Sprint Planning}
 Sprint planning was done to ensure that tasks would be divided between the available three sprints. The tasks were placed on Gantt chart in order to figure out which tasks were critical and how tasks could be split into three sprints. The split is shown in Figure 8.
@@ -345,9 +364,11 @@ Sprint planning was done to ensure that tasks would be divided between the avail
 As both the Web Server and Database tasks are critical, and each task takes 18 days to complete, with two two hour testing tasks. The tasks were split as close to six hours each per sprint as possible.
 
 \subsection{Sprint Retrospective}
+Three sprints were completed, producing a back-end prototype. The split of which tasks were accomplished in each sprint are shown in Table 4. 
 
-Three sprints were completed, producing a back-end prototype. The split of which tasks were accomplished in each sprint are shown in the table below. 
-
+\begin{table}[htb]
+    \caption{Sprint Retrospective of Tasks for Back-end.\label{tab:fonts}}
+    \begin{center} 
 \begin{tabular}{|c|l|c|}
 \hline 
 Sprint & Tasks\\
@@ -362,5 +383,12 @@ Sprint & Tasks\\
  • & Build Database Prototype\\
 \hline
 \end{tabular} 
+\end{center}
+\end{table}
+
+\newpage
+\section{CONCLUSION}
+A software system was designed and implemented using an Agile SCRUM methodology for software management. The designed system prototype demonstrates the expected behaviour for the end product. The WitsCABS application was implemented according to the original SRS and SDS documents and a sprint process was used for realising the product. A concise description of the work breakdown for the project is also given.
+
 
 \end{document}
