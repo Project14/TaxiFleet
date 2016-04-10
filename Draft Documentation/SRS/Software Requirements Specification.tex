@@ -47,6 +47,8 @@ The person who falls part of the target market of the proposed product. This is 
 \subsubsection{Dispatch Agent:}
 The person, or person who are required to operate the dispatch control center. They are responsible for answering customer phone calls and capturing data.
 
+\subsubsection{Driver:}
+This is the person who operates the taxi cab. Responsibilities for the driver include picking up a client when they have been assigned one, and responding with the appropriate responses available to them through the web interface.
 
 \subsection{Scope}
 
@@ -127,13 +129,18 @@ To achieve a quality product the test driven development(TDD) paradigm will be a
 
 Following the Scrum SDLC methodology, will provide shippable incrementally improved products. A minimum of required features will be needed for a product that can meet the project scope as defined above. Additional functionality can be incrementally provided over the life span of the product.
 
-\subsection{Constraints}
-
 \subsection{Assumptions and Dependencies}
 
+\subsubsection{The Driver}
+\begin{itemize}
+\item It is assumed that the driver will access the web interface through a GPS enabled phone.
+\item A further assumption is that a driver will be available at the time a customer requests.
+\end{itemize}
 
-
-
+\subsubsection{The Customer}
+\begin{itemize}
+\item It is taken under assumption that a customer's current location and destination will be at a reachable address within the city limits.
+\end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

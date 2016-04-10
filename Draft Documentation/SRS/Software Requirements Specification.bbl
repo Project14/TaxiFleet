@@ -1,6 +1,11 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\url}[1]{{\tt #1}}
 \providecommand{\urlprefix}{URL }
+
+\bibitem{SoftwareEngTextbook}
+R.~Stephens.
+\newblock {\em Beginning Software Engineering\/}.
+\newblock John Wiley and Sons, Inc, 2015.
 
 \end{thebibliography}
