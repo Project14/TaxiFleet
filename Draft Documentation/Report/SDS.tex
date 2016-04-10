@@ -146,7 +146,7 @@ When DCC agents submit a new customer in the form, the back-end database is upda
 
 \subsection{Back-end Architecture}
 \subsubsection{Web Server}\mbox{}\\
-The Web Server functions primarily as an intermediary between the front-end and the database. It fulfils this role through a collection of interfaces that the front-end can access. The Interfaces are as follows:
+The Web Server functions primarily as an intermediary between the front-end and the database. It fulfils this role through a collection of HTTP interfaces that the front-end can access using GET and POST calls. The interfaces are as follows:
 \begin{itemize}
 \item Login: This is to check that the User attempting to log in is a valid User and check which type of User it is, if successful.
 	\begin{itemize}

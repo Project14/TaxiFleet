@@ -254,13 +254,53 @@ Sprint & Features\\
 
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \section{PART B: BACK-END}
 \subsection{SRS}
+The Software Requirements Specification (SRS) defines the scope and success criteria of the WitsCABS application. \\ \\
+
+The SRS required the following functionality to be present in the WitsCABS application:
+\begin{itemize}
+\item DCC Agents must be able to view all active Trips
+\item DCC Agents must be able to capture Trips
+\item Drivers must be able to view their allocated Trip
+\item Drivers must be able to mark Trips as completed
+\end{itemize}
+
+The prototype produced for the back-end demonstrates a database capable of storing the information required for the above functionality. It does, however, only contain a script for demonstrating the extracting of information to view all Trips. \\
+
+Further work required is to create scripts capable of extracting or writing any other information required as well as interfacing those scripts with the front-end.\\
+
+The nature of the implementation that was lacking was that it was not test driven. This was specified in the SRS as the testing plan to be followed. Had it been, the script would have been created and the database created to fit the tests.
 \subsection{SDS}
+The Software Design Specification (SDS) document details the different parts of the back-end that are required, namely the Web Server for interfacing with the front-end and the Database for storing data.
+
+Http interfaces are required for the front-end to interact with the Web Server. These are accessed through GET and POST calls from the front-end. The required inputs and the supplied output of each call is defined in the SDS.
+
+Once created, databases are difficult to alter without compromising the integrity of the data contained inside its tables, so a strict and robust definition of the database is required. The nature of each table, as well as the structure of each table is defined in the SDS.
+
+The SDS lacks clear definition on how third party APIs will be accessed. This is due to time constraints in implementing the project and the fact that these additional features were added at a later date. For future work, the SDS must be updated to include these modules.
 \subsection{Prototype Implementation}
+The core of the back-end is the database, so it was decided that the demonstration should show the database structure and should contain at least one query. The chosen query was the GetActiveTrips query, as it is the single most complex query required due to the query requiring data from almost all tables.\\
+
+The database structure was created by using database diagrams in Microsoft SQL Management studio, a graphical interface that the developer had previous experience in using. This generated an MSSQL database, which was populated with sample data. A tool called SQLConverter was used to convert the MSSQL database into an SQLite database, from which a database creation script was generated.\\
+
+The SQL Query was created in gedit and was designed to illustrate that the data needed to display the DCC Agent view could be retrieved from the database. As the database alone cannot query the Google Maps API, a crude x-y coordinate system was implemented to show that the database is capable of doing calculations. One limitation of SQLite is that is cannot perform square root calculations, so the calculations are left at a point where further maths could be done. \\
+
+In order to run the demonstration, the user must ensure that SQLite is installed. This is done in Ubuntu by running the following in the terminal:
+\begin{verbatim}
+sudo apt-get sqlite3
+\end{verbatim}
+In order to import the database and view the demonstration output, the following must be run in the terminal:
+\begin{verbatim}
+sqlite3
+.read CreateSampleDatabase.sql
+.read GetActiveJobs.sql
+\end{verbatim}
+
+The demonstration code was created and tested by Stephen Friedman.
+
 \subsection{Product Backlog}
 
 \subsection{Sprint Planning}
