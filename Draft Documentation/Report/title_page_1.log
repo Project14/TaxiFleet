@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.25)  10 APR 2016 12:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.25)  10 APR 2016 12:33
 entering extended mode
 **title_page_1.tex
 (title_page_1.tex
@@ -85,34 +85,24 @@ File: wits-logo.jpg Graphic file (type jpg)
 Package pdftex.def Info: wits-logo.jpg used on input line 25.
 (pdftex.def)             Requested size: 113.89839pt x 112.01936pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 52.
+(Font)              <12> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 52.
+(Font)              <8> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 52.
+(Font)              <6> on input line 53.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./wits-logo.jpg>]
 (title_page_1.toc)
 \tf@toc=\write3
  [1]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 84.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 86.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 86.
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 103--104
 
  []
@@ -123,76 +113,82 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--104
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--117
-
- []
-
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 134--135
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 117--119
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 127--128
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--145
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
 [4]
-
-LaTeX Warning: Reference `fig:DCCview1' on page 5 undefined on input line 146.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 
-LaTeX Warning: File `DCC active panel.png' not found on input line 151.
+LaTeX Warning: File `DCC active panel.png' not found on input line 152.
 
 <DCC active panel.png, id=27, 1028.34187pt x 578.16pt>
 File: DCC active panel.png Graphic file (type png)
 
 <use DCC active panel.png>
-Package pdftex.def Info: DCC active panel.png used on input line 151.
+Package pdftex.def Info: DCC active panel.png used on input line 152.
 (pdftex.def)             Requested size: 390.0pt x 219.2708pt.
 
 
-LaTeX Warning: File `new customer form.png' not found on input line 157.
+LaTeX Warning: File `new customer form.png' not found on input line 158.
 
 <new customer form.png, id=28, 874.76813pt x 199.49532pt>
 File: new customer form.png Graphic file (type png)
 
 <use new customer form.png>
-Package pdftex.def Info: new customer form.png used on input line 157.
+Package pdftex.def Info: new customer form.png used on input line 158.
 (pdftex.def)             Requested size: 390.0pt x 88.94102pt.
 
 
-LaTeX Warning: File `driver view.png' not found on input line 163.
+LaTeX Warning: File `driver view.png' not found on input line 164.
 
 <driver view.png, id=29, 1028.34187pt x 578.16pt>
 File: driver view.png Graphic file (type png)
  <use driver view.png>
-Package pdftex.def Info: driver view.png used on input line 163.
+Package pdftex.def Info: driver view.png used on input line 164.
 (pdftex.def)             Requested size: 390.0pt x 219.2708pt.
 
 
-LaTeX Warning: File `login screen and pop up.png' not found on input line 169.
+LaTeX Warning: File `login screen and pop up.png' not found on input line 170.
 
 <login screen and pop up.png, id=30, 1028.34187pt x 578.16pt>
 File: login screen and pop up.png Graphic file (type png)
 
 <use login screen and pop up.png>
-Package pdftex.def Info: login screen and pop up.png used on input line 169.
+Package pdftex.def Info: login screen and pop up.png used on input line 170.
 (pdftex.def)             Requested size: 390.0pt x 219.2708pt.
  [5 <./DCC active panel.png>]
 Missing character: There is no â in font cmr12!
@@ -226,17 +222,17 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ¢ in font cmr12!
 
-Overfull \hbox (91.08015pt too wide) in paragraph at lines 198--220
+Overfull \hbox (91.08015pt too wide) in paragraph at lines 197--219
 [] 
  []
 
 [6 <./new customer form.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 221--222
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
 
  []
 
 [7 <./driver view.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 223--224
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
 
@@ -246,7 +242,7 @@ File: gantt.png Graphic file (type png)
 Package pdftex.def Info: gantt.png used on input line 227.
 (pdftex.def)             Requested size: 390.0pt x 203.69098pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
 
  []
 
@@ -263,29 +259,22 @@ Missing character: There is no ¢ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ¢ in font cmr12!
- [9 <./gantt.png>] [10] (title_page_1.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+ [9 <./gantt.png>] [10] (title_page_1.aux) ) 
 Here is how much of TeX's memory you used:
- 1192 strings out of 493698
- 15690 string characters out of 3144412
+ 1191 strings out of 493698
+ 15666 string characters out of 3144412
  73994 words of memory out of 3000000
- 4545 multiletter control sequences out of 15000+200000
+ 4544 multiletter control sequences out of 15000+200000
  10659 words of font info for 37 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,6n,19p,670b,268s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmti12.pfb>
-Output written on title_page_1.pdf (12 pages, 673734 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on title_page_1.pdf (12 pages, 674316 bytes).
 PDF statistics:
  73 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
