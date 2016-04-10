@@ -9,15 +9,15 @@
 \contentsline {subsubsection}{\numberline {1.4.4}Scrum Master}{3}
 \contentsline {section}{\numberline {2}PART A: FRONT-END}{4}
 \contentsline {subsection}{\numberline {2.1}SRS}{4}
-\contentsline {subsection}{\numberline {2.2}SDS}{4}
-\contentsline {subsection}{\numberline {2.3}Prototype Implementation}{4}
-\contentsline {subsection}{\numberline {2.4}Product Backlog}{4}
-\contentsline {subsection}{\numberline {2.5}Sprint Planning}{4}
-\contentsline {subsection}{\numberline {2.6}Sprint Retrospective}{4}
-\contentsline {section}{\numberline {3}PART B: BACK-END}{5}
-\contentsline {subsection}{\numberline {3.1}SRS}{5}
-\contentsline {subsection}{\numberline {3.2}SDS}{5}
-\contentsline {subsection}{\numberline {3.3}Prototype Implementation}{5}
-\contentsline {subsection}{\numberline {3.4}Product Backlog}{5}
-\contentsline {subsection}{\numberline {3.5}Sprint Planning}{5}
-\contentsline {subsection}{\numberline {3.6}Sprint Retrospective}{5}
+\contentsline {subsection}{\numberline {2.2}SDS}{5}
+\contentsline {subsection}{\numberline {2.3}Prototype Implementation}{5}
+\contentsline {subsection}{\numberline {2.4}Product Backlog}{5}
+\contentsline {subsection}{\numberline {2.5}Sprint Planning}{5}
+\contentsline {subsection}{\numberline {2.6}Sprint Retrospective}{5}
+\contentsline {section}{\numberline {3}PART B: BACK-END}{6}
+\contentsline {subsection}{\numberline {3.1}SRS}{6}
+\contentsline {subsection}{\numberline {3.2}SDS}{6}
+\contentsline {subsection}{\numberline {3.3}Prototype Implementation}{6}
+\contentsline {subsection}{\numberline {3.4}Product Backlog}{6}
+\contentsline {subsection}{\numberline {3.5}Sprint Planning}{6}
+\contentsline {subsection}{\numberline {3.6}Sprint Retrospective}{6}
