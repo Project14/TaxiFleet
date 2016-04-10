@@ -47,7 +47,8 @@
 Danielle Winter\\
 Frederick Nieuwoudt\\[0.1cm]
 \emph{Back-End:}\\
-Stephen Friedman
+Stephen Friedman\\
+Sello Molele
 \end{flushleft}
 \end{minipage}
 ~
@@ -56,7 +57,8 @@ Stephen Friedman
 \emph{Student Number:} \\
 563795\\
 386372\\[0.6cm]
-360938
+360938\\
+0604606X
 \end{flushright}
 \end{minipage}\\[0.5cm]
 
@@ -75,7 +77,7 @@ Stephen Friedman
 \section{INTRODUCTION}
 \pagenumbering{arabic}
 \subsection{Project Overview}
-
+A software management system for a taxi company WitsCABS is designed and a basic prototype of the system has been implemented. Sections 2 and 3 address the front-end and back-end frameworks respectively with details for the Software Requirements Specification (SRS) and Software Design Specification (SDS) given for each section. In addition to this, the sections detail how the work was split into sprints according to an Agile, SCRUM framework and how the prototype systems were implemented.
 \subsection{Problem Statement}
 The WitsCABS company owns a fleet of taxi-cabs and employs drivers for customer transportation within a city. The city is demarcated into service zones with a single taxi-stand in each service zone. Cab drivers wait for clients at their closest taxi-stand. Each driver has a smartphone, embedded with a GPS, maps and navigational tracking and access to the WitsCabs web application. A centralised Dispatch Control Centre (DCC) receives calls from customers and processes the new requests. WitsCABS requires the software application to organise their taxi-fleet, coordinate drivers and manage new job requests.
 
@@ -191,8 +193,6 @@ The front-end is implemented using angular.js and Bootstrap3. Included in the HT
 \end{itemize}
 \end{itemize}
 
-
-
 \subsection{Product Backlog}
 \begin{tabular}{|c|l|c|}
 \hline 
@@ -219,13 +219,15 @@ General & Log-in page & 5\\
 \subsection{Sprint Planning}
 Sprint planning was undertaken to divide tasks in such a way that the most efficient path was taken.\\
 
-In order to achieve this the task back log was represented on a gantt chart in order to visualize the product dependencies and which tasks could happen in parallel. The produced gantt char is available in the figure below.\\
+In order to achieve this the task back log was represented on a gantt chart in order to visualize the product dependencies and which tasks could happen in parallel. The produced gantt chart is available in the figure 5 below.\\
 
 \begin{figure}[ht]
 \centering
+\label{gantt}
 \includegraphics[width=1\textwidth]{gantt.png}
 \caption{Gantt chart showing all required tasks and their dependencies.}
 \end{figure}
+
 The tasks were divided according to whether they were on the critical path or not. Creating the views for specific users was the most important for the success of the prototype. Tasks such and login authentication and the addition of Google maps functionality were not critical to the creation of a prototype that can visually demonstrate the final product.
 \subsection{Sprint Retrospective}
 Three sprints were completed to produce the presented front-end prototype. The features implemented in each sprint has been cataloged in the table below.\\
