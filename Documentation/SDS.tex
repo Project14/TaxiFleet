@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% witseiepaper-2005.tex
+%
+%                       Ken Nixon (12 October 2005)
+%
+%                       Sample Paper for ELEN417/455 2005
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt, onecolumn]{witseiepaper}
+
+%
+% All KJN's macros and goodies (some shameless borrowing from SPL)
+\usepackage{KJN}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+\title{FLEET OF TAXI SERVICE MANAGEMENT SYSTEM - SOFTWARE DESIGN SPECIFICATION}
+
+\author{Danielle Winter (563795), Frederick Nieuwoudt (386372), Stephen Friedman (360938) \& Sello Molele (0604606X)}
+\thanks{School of Electrical \& Information Engineering, University of the
+Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+
+\maketitle
+\thispagestyle{empty}\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\section{INTRODUCTION}
+\subsection{Purpose of this Document}
+This Software Design Specification (SDS) details the design for the WitsCABS application. The back- and front-end interfaces are described separately. The front-end and back-end integration is also described. The remainder of Section 1 details the project scope and abbreviations and definitions used in the remainder of the SDS. Section 2 addresses the basic system architecture and Section 3 gives a more detailed description of how the system will be implemented. 
+\subsection{Project Scope}
+The taxi fleet management system is a tool that provides a service where a user can request a taxi and the system will dispatch the closest available driver.\\\\
+The system back-end will be required to store information about drivers, customers, and the current pricing scheme. The system will keep historical data regarding trips that have been taken for auditing and dispute resolution.\\\\
+The system front end will be presented in the form of a web interface. This will provide a means for Dispatch Control Centre agents to input new customer's details and for drivers to manage their current job requests. The web interface will also provide a quoted price for the client.\\\\
+For the purposes of this project, the entire system functionality is described in the SDS. However, only a few base modules and components of the code are implemented as a prototype of the system in order to show basic functionality.
+
+\subsection{Definitions}
+\subsubsection{Definitions}
+\begin{itemize}
+\item WitsCABS: The name of the software application including front- and back-ends
+\item Driver: The taxi-cab drivers employed by the WitsCABS company to pick-up and deliver customers
+\item Customer: Clients of the company who request lifts
+\end{itemize}
+\subsubsection{Abbreviations}
+\begin{itemize}
+\item DCC: Dispatch Control Centre
+\end{itemize}
+
+
+\section{SYSTEM ARCHITECTURE}
+\subsection{Front-end Views}
+The front-end of the WitsCABS application is presented as two separate views in an HTML web-application. The front end is coded in angular.js using Twitter Bootstrap for a unified visual appearance and pop-up functionality. The respective interfaces are the DCC view and the Driver view. These views are linked through a common log-in screen view where the respective users select and log in to their interface.
+\subsubsection{DCC View}
+
+\subsubsection{Driver View}
+\subsubsection{Log-in View}
+
+\subsection{Back-end Implementation}
+
+\section{DETAILED ARCHITECTURE AND FEATURES}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%\nocite{*}
+\bibliographystyle{witseie}
+\bibliography{TaxiFleet}
+
+%{\tiny \vfill \hfill \today \hspace{5mm} witseie-paper-2003.\TeX}
+
+\end{document}
+
+" vim: ts=4
+" vim: tw=78
+" vim: autoindent
+" vim: shiftwidth=4

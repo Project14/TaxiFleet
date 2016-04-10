@@ -42,7 +42,7 @@ This Software Design Specification (SDS) details the design for the WitsCABS app
 The taxi fleet management system is a tool that provides a service where a user can request a taxi and the system will dispatch the closest available driver.\\\\
 The system back-end will be required to store information about drivers, customers, and the current pricing scheme. The system will keep historical data regarding trips that have been taken for auditing and dispute resolution.\\\\
 The system front end will be presented in the form of a web interface. This will provide a means for Dispatch Control Centre agents to input new customer's details and for drivers to manage their current job requests. The web interface will also provide a quoted price for the client.\\\\
-For the purposes of this project, the entire system functionality is described in the SDS. However, only a few base modules and components of the code are implemented as a prototype of the system in order to show basic functionality.
+For the purposes of this project, the entire system functionality is described in the SDS. However, only a few modules and components of the code are implemented as a prototype of the system in order to show basic functionality.
 
 \subsection{Definitions}
 \subsubsection{Definitions}
@@ -61,9 +61,11 @@ For the purposes of this project, the entire system functionality is described i
 \subsection{Front-end Views}
 The front-end of the WitsCABS application is presented as two separate views in an HTML web-application. The front end is coded in angular.js using Twitter Bootstrap for a unified visual appearance and pop-up functionality. The respective interfaces are the DCC view and the Driver view. These views are linked through a common log-in screen view where the respective users select and log in to their interface.
 \subsubsection{DCC View}
-
+The DCC view includes panels for a new customer form and an active job list. The "new customer form" panel has text boxes for the customer's name, current location, destination and cellphone number. A submit button allows the DCC agent to submit the entry to the back-end database, at which point, the distance and price for the job is calculated. The new job will be added to the "active jobs" panel in the DCC interface and the DCC will be able to see the price calculated for the customer.
 \subsubsection{Driver View}
+The driver view allows the driver to see their assigned job, the customer name and contact details and their travel destination. In addition to this, two buttons are presented to the driver - one for "On the Way" when they leave the taxi rank and one for "Job Complete" when the customer has been delivered.
 \subsubsection{Log-in View}
+The log-in page gives the user the ability to select whether they are a driver or a DCC agent and allows them to log in to their respective view. The log-in page should prompt users for a username and password and their entry should be authenticated through the back-end.
 
 \subsection{Back-end Implementation}
 The back-end of the WitsCABS application consists of two main parts. The part that directly interfaces with the front-end is an Apache web server which runs on Ubuntu and executes Python scripts in order to interact with the database and external APIs. The part of the back-end that stores the data is an SQLite database.
@@ -76,7 +78,74 @@ The three external APIs are Paym8, SMSPortal and Google Maps. The Paym8 API is u
 The role of the database in the WitsCABS application is to store data so that different users can interact with the same data without directly transmitting the data between each other and so that data can be kept for auditing and dispute resolution if need be.
 \\ \\
 For the database queries, either many simple queries could be implemented or few complex queries could be implemented. Complex queries were chosen as they take advantage of optimisation in SQL. Complex queries require more development and testing time, but once implemented and verified produce faster results than many simple queries.
-\\ \\
+
+\section{DETAILED ARCHITECTURE AND FEATURES}
+\subsection{Front-end Architecture}
+The front-end architecture is detailed below for the angular.js and HTML files. The front-end and back-end communicate through button pushes - firstly with the log-in page user authentication and then in the respective views.
+\subsubsection{angular.js File}
+\begin{itemize}
+\item angular module - WitsCABS
+\item angular controller - JobController
+\item customer directive - jobs
+\item array of customers
+\begin{itemize}
+\item customer name (string)
+\item customer destination (string)
+\item customer current location (string)
+\item customer phone number (string)
+\item distance (integer)
+\item price (integer)
+\item job active (boolean)
+\item driver assigned (boolean)
+\end{itemize}
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{HTML File}\mbox{}\\
+
+When DCC agents submit a new customer in the form, the back-end database is updated and a taxi-driver is assigned to the new job. The driver interface will be updated. Drivers can state when a job is complete, at which point, the database will once again be updated and the respective views refreshed. Upon log-in details being entered, authentication is implemented through the back-end framework before users can be redirected to their respective pages.
+\begin{itemize}
+\item DCC View
+\begin{itemize}
+\item Headings\\
+\item Active job panel
+\begin{itemize}
+\item active customers list
+\item driver assigned (boolean)
+\item customer location, destination and phone number (paragraphs under each customer)\\
+\end{itemize}
+\item New customer form panel
+\begin{itemize}
+\item customer name field
+\item customer destination field
+\item customer current location field
+\item customer phone number field
+\item submit button \\
+\end{itemize}
+\end{itemize} 
+\item Driver View
+\begin{itemize}
+\item Headings\\
+\item Assigned job panel
+\begin{itemize}
+\item customer details
+\item "On the way" button
+\item "Job complete" button\\
+\end{itemize}
+\end{itemize}
+\item Log-in Page
+\begin{itemize}
+\item Log-in modal
+\begin{itemize}
+\item driver log-in button - redirects to driver interface
+\item DCC log-in button - redirects to DCC interface
+\item close button\\
+\end{itemize}
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Back-end Architecture}
+\subsubsection{Database}\mbox{}\\
 The database consists of the following tables:
 \begin{itemize}
 \item Users: This table contains information to verify a User when they log in. The users' username and hashed password are stored. The hash of the password is stored so that nobody that has access to the WitsCABS database can compromise the users' passwords.
@@ -88,11 +157,121 @@ The database consists of the following tables:
 \item Trips: This table contains information relating to each Trip undertaken. It allows DCC agents to view all active Trips, it allows Drivers to be easily assigned to Trips and it allows for the retention of historical data for auditing or dispute resolution purposes.
 \end{itemize}
 
-\section{DETAILED ARCHITECTURE AND FEATURES}
+\subsubsection{Detailed Database Table Structure}
+\subsection*{Users:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+UserId & Int & Primary Key, Auto-increment\\
+\hline 
+UserName & Text & Login Name of User\\
+\hline 
+PasswordHash & Text & Password, hashed to prevent unauthorised use\\
+\hline
+\end{tabular}
 
+\subsection*{Agents:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+AgentId & Int & Primary Key, Auto-increment\\
+\hline 
+UserId & Int & Foreign Key\\
+\hline 
+Name & Text & Real name of DCC agent\\
+\hline
+\end{tabular}
 
+\subsection*{Drivers:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+DriverId & Int & Primary Key, Auto-increment\\
+\hline 
+UserId & Int & Foreign Key\\
+\hline 
+Name & Text & Real name of Driver\\
+\hline
+CurrentLocationId & Int & Foreign Key\\
+\hline
+CurrentlyActive & Bit & Indicates if a driver is at work or not\\
+\hline
+CurrentlyAssigned & Bit & Indicates if driver is busy with a Trip\\
+\hline
+\end{tabular}
 
+\subsection*{Cost:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+CostId & Int & Primary Key, Auto-increment\\
+\hline 
+Type & Text & Friendly description of Cost\\
+\hline 
+AmountInCents & Int & Money is indicated to 2 decimal places, so to avoid rounding issues,\\
+• & • & work with money as an integer number of cents and divide by\\ 
+• & • & 100 before displaying in order to show an amount in Rands\\
+\hline
+\end{tabular}
 
+\subsection*{Customers:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+CustomerId & Int & Primary Key, Auto-increment\\
+\hline 
+Name & Text & Real name of Customer\\
+\hline
+PhoneNumber & Text & Contact number of Customer\\
+\hline
+CreditCardNumber & Text & Financial information of Customer\\
+\hline
+CreditCardType & Text & Financial information of Customer\\
+\hline
+CVV & Text & Financial information of Customer\\
+\hline
+\end{tabular}
+
+\subsection*{Location:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+LocationId & Int & Primary Key, Auto-increment\\
+\hline 
+LocationName & Text & Friendly name of the Location\\
+\hline
+GPSLat & Int & GPS Latitude, stored in seconds\\
+\hline
+GPSLon & Int & GPS Longitude, stored in seconds\\
+\hline
+\end{tabular}
+
+\subsection*{Trip:}
+\begin{tabular}{|c|l|c|}
+\hline 
+Field & Type & Notes\\ 
+\hline 
+TripId & Int & Primary Key, Auto-increment\\
+\hline 
+CustomerId & Int & Foreign Key\\
+\hline 
+StartLocationId & Int & Foreign Key\\
+\hline 
+EndLocationId & Int & Foreign Key\\
+\hline 
+DriverId & Int & Foreign Key\\
+\hline 
+CostId & Int & Foreign Key\\
+\hline 
+Active & Bit & Indicates if the Trip is under-way or if it has been completed\\
+\hline
+\end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
