@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.15)  10 APR 2016 10:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.22)  10 APR 2016 20:14
 entering extended mode
 **"Software Requirements Specification.tex"
 ("Software Requirements Specification.tex"
@@ -341,7 +341,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
  5718 strings out of 493698
- 83162 string characters out of 3144412
+ 83162 string characters out of 3144406
  171199 words of memory out of 3000000
  8943 multiletter control sequences out of 15000+200000
  26188 words of font info for 91 fonts, out of 3000000 for 9000
@@ -354,7 +354,7 @@ s/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
 public/amsfonts/cm/cmsl8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb>
-Output written on "Software Requirements Specification.pdf" (2 pages, 108467 by
+Output written on "Software Requirements Specification.pdf" (2 pages, 108060 by
 tes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
