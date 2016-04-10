@@ -37,15 +37,15 @@ Witwatersrand, Private Bag 3, 2050, Johannesburg, South Africa}
 %
 \section{Introduction}
 A software database system for a Taxi Fleet Management is proposed in this Software Requirements Specification. The objective of this document is to describe in detail the user requirements as well as the specifics of what the system requires and how it will be developed.\\\\
-The aim of the system is to respond to a customer request for transport to a location. It will then find an available driver for the job and deploy their taxi for service. It will also allow for users to manage profiles and administrators to manage diver profiles.
+The aim of the system is to respond to a customer request for transport to a location. It will then find an available driver for the job and deploy their taxi for service. It will also allow for users to manage profiles and administrators to manage driver profiles.
 
 \subsection{Definitions}
 
 \subsubsection{Customer:}
-The person who falls part of the target market of the proposed product. This is the person who is utilizing the services provided by the system.
+The person who falls within the target market of the proposed product. This is the person who is utilizing the services provided by the system.
 
 \subsubsection{Dispatch Agent:}
-The person, or person who are required to operate the dispatch control center. They are responsible for answering customer phone calls and capturing data.
+The people who are required to operate the dispatch control center. They are responsible for answering customer phone calls and capturing data.
 
 \subsubsection{Driver:}
 This is the person who operates the taxi cab. Responsibilities for the driver include picking up a client when they have been assigned one, and responding with the appropriate responses available to them through the web interface.
@@ -54,7 +54,7 @@ This is the person who operates the taxi cab. Responsibilities for the driver in
 
 The taxi fleet management system is a tool that provides a service where a customer can request a taxi via a phone call to the dispatch control center and an appropriate driver will be routed to them.\\\\
 The system back-end will be required to store information about drivers, customers, and the current pricing scheme. The system will keep historical data regarding trips that have been taken for auditing and dispute resolution.\\\\
-The system front end will be presented in the form of a web interface. This will provide a means for dispatching agent to input the customer's current location and destination. The web interface must also provide a means for the taxi driver to access information about the job that has been allocated to them.
+The system front-end will be presented in the form of a web interface. This will provide a means for dispatching agent to input the customer's current location and destination. The web interface must also provide a means for the taxi driver to access information about the job that has been allocated to them.
 
 \section{Overall Project Description}
 
@@ -96,7 +96,7 @@ Driver
 \begin{itemize} 
 \item Receiving Allocated Job Card
 \begin{itemize}
-\item Only the assigned customer must be displayed. This prioritized by the distance from the driver.
+\item Only the assigned customer must be displayed. The pairing will be prioritized by the distance between driver and customer.
 \end{itemize}\
 
 \item Viewing relevant customer details
@@ -115,7 +115,7 @@ Driver
 
 \item Capturing customer details.
 \begin{itemize}
-\item A dispatch control center agent must be able to capture client data by inputting it into the provide web interface.
+\item A dispatch control center agent must be able to capture client data by entering it into the provide web interface.
 \item Agents must be able to view information on currently active jobs. including currently assigned driver and the job specifics.
 \end{itemize}
 \end{itemize}
@@ -134,13 +134,17 @@ Following the Scrum SDLC methodology, will provide shippable incrementally impro
 \subsubsection{The Driver}
 \begin{itemize}
 \item It is assumed that the driver will access the web interface through a GPS enabled phone.
-\item A further assumption is that a driver will be available at the time a customer requests.
+\item A further assumption is that a driver will be available at the time a customer requests. 
+\item The driver is assumed to only have a single customer assigned to them.
 \end{itemize}
 
 \subsubsection{The Customer}
 \begin{itemize}
 \item It is taken under assumption that a customer's current location and destination will be at a reachable address within the city limits.
+\item During the prototyping phase it is assumed that a customer only represents a single passenger.
 \end{itemize}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
