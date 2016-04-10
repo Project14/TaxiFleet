@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.22)  10 APR 2016 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.2.22)  10 APR 2016 18:58
 entering extended mode
 **title_page_1.tex
 (title_page_1.tex
@@ -260,65 +260,143 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ¢ in font cmr12!
  [9 <./gantt.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 
-Overfull \hbox (9.61263pt too wide) in paragraph at lines 263--264
+Overfull \hbox (9.61263pt too wide) in paragraph at lines 260--261
 []\OT1/cmr/m/n/12 The SRS re-quired the fol-low-ing func-tion-al-ity to be pres
 ent in the WitsCABS
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--290
+LaTeX Warning: File `Database Diagram.png' not found on input line 288.
+
+<Database Diagram.png, id=53, 468.62578pt x 241.65282pt>
+File: Database Diagram.png Graphic file (type png)
+
+<use Database Diagram.png>
+Package pdftex.def Info: Database Diagram.png used on input line 288.
+(pdftex.def)             Requested size: 390.0pt x 201.12119pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
-[11] [12] (title_page_1.aux) ) 
+
+LaTeX Warning: File `Query Results.png' not found on input line 296.
+
+<Query Results.png, id=54, 346.29375pt x 103.51172pt>
+File: Query Results.png Graphic file (type png)
+ <use Query Results.png>
+Package pdftex.def Info: Query Results.png used on input line 296.
+(pdftex.def)             Requested size: 390.0pt x 116.57988pt.
+
+[11]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+
+Overfull \hbox (84.12329pt too wide) in paragraph at lines 314--335
+[] 
+ []
+
+[12 <./Database Diagram.png>]
+
+LaTeX Warning: File `Back End Gantt.png' not found on input line 341.
+
+<Back End Gantt.png, id=63, 745.66078pt x 381.29953pt>
+File: Back End Gantt.png Graphic file (type png)
+
+<use Back End Gantt.png>
+Package pdftex.def Info: Back End Gantt.png used on input line 341.
+(pdftex.def)             Requested size: 390.0pt x 199.42888pt.
+ [13 <./Query Results.png>]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no ¢ in font cmr12!
+ [14 <./Back End Gantt.png>] (title_page_1.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 1193 strings out of 493698
- 15687 string characters out of 3144406
- 73994 words of memory out of 3000000
- 4545 multiletter control sequences out of 15000+200000
+ 1208 strings out of 493698
+ 15993 string characters out of 3144406
+ 73984 words of memory out of 3000000
+ 4557 multiletter control sequences out of 15000+200000
  10828 words of font info for 38 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,6n,19p,670b,268s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc
-10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on title_page_1.pdf (14 pages, 685423 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmtt12.pfb>
+Output written on title_page_1.pdf (16 pages, 811463 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 93 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

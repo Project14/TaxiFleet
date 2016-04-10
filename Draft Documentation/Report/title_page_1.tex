@@ -238,7 +238,6 @@ Sprint & Features\\
 \hline 
  1 & Create basic interface framework\\ 
 • & Set up AngularJS customer directive\\
-
 \hline 
  2 & Driver assigned job panel\\
 • & Create default login page\\
@@ -246,8 +245,6 @@ Sprint & Features\\
 \hline 
  3 & Add DCC active jobs panel \\ 
  • & Add DCC customer form panel\\
- 
-
 \hline
 \end{tabular} 
 
@@ -284,9 +281,21 @@ The SDS lacks clear definition on how third party APIs will be accessed. This is
 \subsection{Prototype Implementation}
 The core of the back-end is the database, so it was decided that the demonstration should show the database structure and should contain at least one query. The chosen query was the GetActiveTrips query, as it is the single most complex query required due to the query requiring data from almost all tables.\\
 
-The database structure was created by using database diagrams in Microsoft SQL Management studio, a graphical interface that the developer had previous experience in using. This generated an MSSQL database, which was populated with sample data. A tool called SQLConverter was used to convert the MSSQL database into an SQLite database, from which a database creation script was generated.\\
+The database structure was created by using database diagrams in Microsoft SQL Management studio, a graphical interface that the developer had previous experience in using. This generated an MSSQL database, which was populated with sample data. A tool called SQLConverter was used to convert the MSSQL database into an SQLite database, from which a database creation script was generated. The database is shown in Figure 6.\\
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{Database Diagram.png}
+\caption{Database diagram of the prototype.}
+\end{figure}
 
 The SQL Query was created in gedit and was designed to illustrate that the data needed to display the DCC Agent view could be retrieved from the database. As the database alone cannot query the Google Maps API, a crude x-y coordinate system was implemented to show that the database is capable of doing calculations. One limitation of SQLite is that is cannot perform square root calculations, so the calculations are left at a point where further maths could be done. \\
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{Query Results.png}
+\caption{Database prototype query results.}
+\end{figure}
 
 In order to run the demonstration, the user must ensure that SQLite is installed. This is done in Ubuntu by running the following in the terminal:
 \begin{verbatim}
@@ -299,12 +308,59 @@ sqlite3
 .read GetActiveJobs.sql
 \end{verbatim}
 
-The demonstration code was created and tested by Stephen Friedman.
+The results of the above query are shown in Figure 7. The demonstration code was created and tested by Stephen Friedman.
 
 \subsection{Product Backlog}
+\begin{tabular}{|c|l|c|}
+\hline 
+Component & Task & Expected Time (Days)\\ 
+\hline 
+Database & Design database structure & 5\\ 
+• & Investigate database options & 1\\ 
+• & Develop Database Structure & 3 \\
+• & Develop Database Queries & 3\\
+• & Configure Database & 1\\
+• & Build Database Prototype & 5\\
+\hline 
+Web Server & Design Web Server HTTP interface & 5\\
+• & Explore Web Server Options & 1\\ 
+• & Develop Web Server & 5\\
+• & Configure Server & 2\\
+• & Build Server Prototype & 5\\
+\hline 
+General & Test Integration between Server and Database & 2\\
+• & Test Integration between Back-End and Front-End & 2\\
+\hline
+\end{tabular}
 
 \subsection{Sprint Planning}
+Sprint planning was done to ensure that tasks would be divided between the available three sprints. The tasks were placed on Gantt chart in order to figure out which tasks were critical and how tasks could be split into three sprints. The split is shown in Figure 8.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=1\textwidth]{Back End Gantt.png}
+\caption{Gantt chart showing the Product Backlog. Critical Path tasks are in red.}
+\end{figure}
+
+As both the Web Server and Database tasks are critical, and each task takes 18 days to complete, with two two hour testing tasks. The tasks were split as close to six hours each per sprint as possible.
+
 \subsection{Sprint Retrospective}
 
+Three sprints were completed, producing a back-end prototype. The split of which tasks were accomplished in each sprint are shown in the table below. 
+
+\begin{tabular}{|c|l|c|}
+\hline 
+Sprint & Tasks\\
+\hline 
+ 1 & Design database structure\\ 
+• & Investigate database options\\
+\hline 
+ 2 & Develop Database Structure\\
+• & Develop Database Queries\\
+\hline 
+ 3 & Configure Database\\ 
+ • & Build Database Prototype\\
+\hline
+\end{tabular} 
 
 \end{document}
